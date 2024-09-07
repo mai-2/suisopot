@@ -1,3 +1,89 @@
 @use "global" as *;
 
+.problem__inner {
+    background: url(../images/problem-bg-sp.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
 
+.problem__head {
+    padding-top: rclamp(40, 80, 390, 1440);
+    text-align: center;
+}
+
+.problem__body {
+    margin-top: rclamp(20, 25, 390, 1440);
+    display: flex;
+    max-width: 420px;
+    width: 100%;
+    padding-right: 15px;
+}
+
+.problem__image {
+    position: absolute;
+    width: rclamp(163, 368, 390, 1440);
+    height: rclamp(241, 368, 390, 1440);
+    z-index: $layer-background;
+}
+
+.problem__items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-end;
+    margin-top: 30px;
+    padding-bottom: rclamp(31, 41, 390, 1440);
+}
+
+.problem__item {
+    width: rclamp(249, 641, 390, 1440);
+    border: 0.395px solid $c-gray;
+    border-radius: rclamp(8, 16, 390, 1440);
+    display: flex;
+    align-items: baseline;
+    padding: 9.474px 9.474px 9.474px 8px;
+    background: $c-white;
+
+    &+& {
+        margin-top: rclamp(19, 29, 390, 1440);
+    }
+}
+
+.problem__lead {
+    font-size: rclamp(16, 24, 390, 1440);
+    font-weight: $normal;
+    line-height: 130%;
+    letter-spacing: -0.48px;
+    margin-left: rclamp(6.32, 16, 390, 1440);
+}
+
+.problem__item-image {
+    width: rclamp(10, 24, 390, 1440);
+}
+
+.problem__foot {
+    background-color: $c-blue;
+    padding-block: 17px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(17px);
+        border-left: 24px solid transparent;
+        border-right: 24px solid transparent;
+        border-top: 24px solid $c-blue;
+    }
+}
+
+.problem__text {
+    font-size: rclamp(17, 32, 390, 1440);
+    letter-spacing: -0.51px;
+}
