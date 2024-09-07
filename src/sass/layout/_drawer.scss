@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.drawer-icon {
+    width: 27px;
+    // height: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drawer-icon__bar {
+    position: relative;
+    width: 27px;
+    height: 1.5px;
+    background: $c-font;
+    border-radius: 4px;
+    display: block;
+
+    &:nth-of-type(1) {
+        top: 0;
+    }
+
+    &:nth-of-type(2) {
+        margin-block: 6px;
+    }
+}

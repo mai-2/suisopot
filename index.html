@@ -10,6 +10,9 @@
   <meta name="robots" content="noindex">
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Yomogi&display=swap" rel="stylesheet">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./js/script.js"></script>
@@ -18,11 +21,22 @@
   <header class="header">
     <div class="header__inner">
       <h1 class="header__logo">
-        <a href="#" class="header__logo-li">
+        <a href="#" class="header__logo-link">
           <img src="./images/logo.png" alt="SUISOPOT">
         </a>
       </h1>
-      <a href="#" class="header__button">新規お申込</a>
+      <a href="#" class="header__button">新規お申込
+        <svg class="header__button-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+          <g clip-path="url(#clip0_8004_2695)">
+            <path d="M1.94697 1.11914C1.82045 1.11914 1.69098 1.16613 1.59388 1.25736C1.39969 1.4398 1.39969 1.73835 1.59388 1.9208L8.24044 8.16544L1.69098 14.3189C1.49679 14.5013 1.49679 14.7999 1.69098 14.9823C1.88517 15.1648 2.20293 15.1648 2.39712 14.9823L9.3026 8.49716C9.49679 8.31472 9.49679 8.01617 9.3026 7.83372L2.30297 1.25736C2.20293 1.16337 2.07643 1.11914 1.94697 1.11914Z" fill="white"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_8004_2695">
+              <rect width="15" height="9" fill="white" transform="translate(9.74316 0.5) rotate(90)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
       <button class="header__open drawer-icon">
         <span class="drawer-icon__bar"></span>
         <span class="drawer-icon__bar"></span>

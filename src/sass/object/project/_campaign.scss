@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.campaign {
+    padding-top: rclamp(24, 40, 390, 1440);
+    padding-bottom: rclamp(24, 43, 390, 1440);
+    padding-inline: 15px;
+    background: url(../images/campaign-bg-sp.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}

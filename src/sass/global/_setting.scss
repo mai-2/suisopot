@@ -1,28 +1,30 @@
+@use "sass:math";
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$c-white: #fff;
+$c-font: #333333;
+$c-accent: #FF8B71;
+
 ////////////////////
 // フォント設定
 ////////////////////
 
-$base-font-family: "";
-$second-font-family: "";
+$base-font-family: "Noto Sans JP";
+$second-font-family: "Noto Serif JP";
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
-  font-family: $base-font-family;
+  font-family: $base-font-family, sans-serif;
+  color: $c-font;
 }
 
 // フォントウェイト
 $regular: 300;
 $normal: 400;
 $bold: 700;
-
-////////////////////
-// 色の指定
-////////////////////
-
-//色指定（共通性のあるものは出来る限り指定すると良い）
-$black: #111;
-$white: #fff;
-
 
 ////////////////////
 // メディアクエリとブレークポイントの設定
@@ -82,4 +84,26 @@ $layer-background: -1;
   @include mq("md") {
     display: none;
   }
+}
+
+@function rclamp($min, $max, $minViewport, $maxViewport) {
+  $vwScale: math.div($max - $min, $maxViewport - $minViewport);  // vw単位でのスケールを計算
+  $baseOffset: $min - $minViewport * $vwScale;  // 基準となる最小値からのオフセットを計算
+
+  $minRem: math.div($min, 16);  // 最小値をremに変換
+  $maxRem: math.div($max, 16);  // 最大値をremに変換
+  $baseOffsetRem: math.div($baseOffset, 16);  // オフセットをremに変換
+  $vwScaleRem: $vwScale * 100;  // vwスケールを調整
+
+  @return clamp(#{$minRem}rem, #{$baseOffsetRem}rem + #{$vwScaleRem}vw, #{$maxRem}rem);
+}
+
+* {
+  min-height: 0vw;
+  min-height: 0;
+}
+
+// 使用例
+.example {
+  font-size: rclamp(24, 64, 375, 1200);
 }

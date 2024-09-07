@@ -1,1 +1,7 @@
 @use "global" as *;
+
+.section-title {
+    font-family: $second-font-family;
+    font-weight: $normal;
+    font-size: rclamp(24, 40, 390, 1440);
+}

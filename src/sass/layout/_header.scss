@@ -1,1 +1,33 @@
 @use "global" as *;
+
+.header {
+    height: rclamp(60, 104, 390, 1440);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.header__logo {
+    width: rclamp(151, 187, 390, 1440);
+}
+
+.header__button {
+    background: $c-accent;
+    width: rclamp(128, 160, 390, 1440);
+    height: rclamp(40, 56, 390, 1440);
+    // margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $c-white;
+    border-radius: rclamp(32, 40, 390, 1440);
+    font-weight: $bold;
+}
+
+.header__button-arrow {
+    margin-left: 7px;
+}
