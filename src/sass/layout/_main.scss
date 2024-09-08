@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.section-inner {
+    padding-inline: 15px;
+}
+
 .section-title {
     font-family: $second-font-family;
     font-weight: $normal;

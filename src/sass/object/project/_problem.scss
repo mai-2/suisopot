@@ -13,9 +13,10 @@
 }
 
 .problem__body {
+    margin: 0 auto;
     margin-top: rclamp(20, 25, 390, 1440);
     display: flex;
-    max-width: 420px;
+    max-width: rclamp(420, 889, 390, 1440);
     width: 100%;
     padding-right: 15px;
 }
