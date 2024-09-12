@@ -25,6 +25,10 @@
 .talk__icon {
     width: rclamp(50, 90, 390, 1440);
     flex: 0 0 50px;
+
+    &--hidden {
+        opacity: 0;
+    }
 }
 
 .talk__balloon {
