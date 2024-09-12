@@ -381,8 +381,14 @@ select::-ms-expand {
   letter-spacing: -0.51px;
 }
 
+.solution {
+  background-image: url(../images/solution-bg.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .solution__inner {
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .solution__title {
@@ -461,5 +467,70 @@ select::-ms-expand {
 .solution__content-talk {
   margin-top: clamp(42px, 41.257px + 0.1904761905vw, 44px);
   margin-top: clamp(2.625rem, 2.5785714286rem + 0.1904761905vw, 2.75rem);
+}
+
+.talk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(19px, 17.142px + 0.4761904762vw, 24px);
+  gap: clamp(1.1875rem, 1.0714285714rem + 0.4761904762vw, 1.5rem);
+}
+.talk + .talk {
+  margin-top: 16px;
+}
+.talk--reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-left: 20px;
+}
+.talk--reverse .talk__balloon::before {
+  left: auto;
+  left: initial;
+  right: -16px;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.talk__icon {
+  width: clamp(50px, 35.142px + 3.8095238095vw, 90px);
+  width: clamp(3.125rem, 2.1964285714rem + 3.8095238095vw, 5.625rem);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+}
+
+.talk__balloon {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 29, 104, .25);
+          box-shadow: 0px 0px 4px 0px rgba(0, 29, 104, .25);
+  border-radius: 24px;
+  padding: 16px;
+  position: relative;
+}
+.talk__balloon::before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 32px;
+  top: 19px;
+  left: -16px;
+  background-image: url(../images/balloon-triangle.png);
+  background-repeat: no-repeat;
+}
+
+.talk__text {
+  font-size: clamp(15px, 13.142px + 0.4761904762vw, 20px);
+  font-size: clamp(0.9375rem, 0.8214285714rem + 0.4761904762vw, 1.25rem);
+  line-height: 170%;
+  letter-spacing: clamp(-0.15px, -0.428px + 0.0714285714vw, 0.6px);
+  letter-spacing: clamp(-0.009375rem, -0.0267857143rem + 0.0714285714vw, 0.0375rem);
+}
+
+.talk__text-strong {
+  font-weight: 700;
+  background-color: #C6ECEC;
 }
 /*# sourceMappingURL=styles.css.map */

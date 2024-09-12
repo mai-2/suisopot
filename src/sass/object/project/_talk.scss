@@ -1,3 +1,58 @@
 @use "global" as *;
 
+.talk {
+    display: flex;
+    gap: rclamp(19, 24, 390, 1440);
 
+    &+& {
+        margin-top: 16px;
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+        margin-left: 20px;
+
+        .talk__balloon {
+            &::before {
+                left: initial;
+                right: -16px;
+                transform: scale(-1, 1);
+            }
+        }
+    }
+}
+
+.talk__icon {
+    width: rclamp(50, 90, 390, 1440);
+    flex: 0 0 50px;
+}
+
+.talk__balloon {
+    background: $c-white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 29, 104, 0.25);
+    border-radius: 24px;
+    padding: 16px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 17px;
+        height: 32px;
+        top: 19px;
+        left: -16px;
+        background-image: url(../images/balloon-triangle.png);
+        background-repeat: no-repeat;
+    }
+}
+
+.talk__text {
+    font-size: rclamp(15, 20, 390, 1440);
+    line-height: 170%;
+    letter-spacing: rclamp(-0.15, 0.6, 390, 1440);
+}
+
+.talk__text-strong {
+    font-weight: $bold;
+    background-color: $c-green;
+}

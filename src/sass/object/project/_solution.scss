@@ -1,7 +1,13 @@
 @use "global" as *;
 
+.solution {
+    background-image: url(../images/solution-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
 .solution__inner {
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 .solution__title {
