@@ -1,3 +1,64 @@
 @use "global" as *;
 
+.point__inner {
+    padding-top: rclamp(56, 80, 390, 1440);
+    padding-bottom: 40px;
+}
 
+.point__title {
+    text-align: center;
+}
+
+.point__items {
+    margin-top: rclamp(24, 40, 390, 1440);
+}
+
+.point__item {
+    &+& {
+        margin-top: 40px;
+    }
+}
+
+.point__item-number {
+    font-size: 64px;
+    font-family: $font-family-en;
+    font-weight: $normal;
+    color: $c-blue;
+    position: relative;
+    margin-left: 19px;
+
+    &::after {
+        position: absolute;
+        content: 'point';
+        top: 30px;
+        left: -23px;
+        color: $c-font;
+        background-color: $c-white;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}
+
+.point__item-image {
+    border-radius: 2px;
+}
+
+.point__item-content {
+    margin-top: 24px;
+}
+
+.point__item-title {
+    font-size: rclamp(20, 24, 390, 1440);
+    font-weight: $bold;
+    color: #2273AE;
+}
+
+.point__item-text {
+    margin-top: rclamp(16, 24, 390, 1440);
+    line-height: 170%;
+    letter-spacing: 0.48px;
+
+    &--note {
+        color: $c-gray;
+    }
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.cta {
+    background: $c-green;
+    position: relative;
+}
+
+.cta__top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(-100%) translateY(2px) scale(1, 1);
+    transform-origin: top;
+    width: 100%;
+}

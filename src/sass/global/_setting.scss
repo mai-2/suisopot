@@ -15,19 +15,21 @@ $c-green: #C6ECEC;
 // フォント設定
 ////////////////////
 
-$base-font-family: "Noto Sans JP";
-$second-font-family: "Noto Serif JP";
+$base-font-family: "Noto Sans JP", sans-serif;
+$second-font-family: "Noto Serif JP", sans-serif;
+$font-family-en: "Lato", sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
-
-body {
-  font-family: $base-font-family, sans-serif;
-  color: $c-font;
-}
 
 // フォントウェイト
 $regular: 300;
 $normal: 400;
 $bold: 700;
+
+body {
+  font-family: $base-font-family;
+  font-weight: $normal;
+  color: $c-font;
+}
 
 ////////////////////
 // メディアクエリとブレークポイントの設定

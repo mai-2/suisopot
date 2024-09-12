@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
   color: #333333;
 }
 
@@ -248,7 +249,7 @@ select::-ms-expand {
 }
 
 .section-title {
-  font-family: "Noto Serif JP";
+  font-family: "Noto Serif JP", sans-serif;
   font-weight: 400;
   font-size: clamp(24px, 18.057px + 1.5238095238vw, 40px);
   font-size: clamp(1.5rem, 1.1285714286rem + 1.5238095238vw, 2.5rem);
@@ -264,6 +265,86 @@ select::-ms-expand {
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
+}
+
+.cta {
+  background: #C6ECEC;
+  position: relative;
+}
+
+.cta__top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%) translateY(2px) scale(1, 1);
+          transform: translateY(-100%) translateY(2px) scale(1, 1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  width: 100%;
+}
+
+.point__inner {
+  padding-top: clamp(56px, 47.085px + 2.2857142857vw, 80px);
+  padding-top: clamp(3.5rem, 2.9428571429rem + 2.2857142857vw, 5rem);
+  padding-bottom: 40px;
+}
+
+.point__title {
+  text-align: center;
+}
+
+.point__items {
+  margin-top: clamp(24px, 18.057px + 1.5238095238vw, 40px);
+  margin-top: clamp(1.5rem, 1.1285714286rem + 1.5238095238vw, 2.5rem);
+}
+
+.point__item + .point__item {
+  margin-top: 40px;
+}
+
+.point__item-number {
+  font-size: 64px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #82BFED;
+  position: relative;
+  margin-left: 19px;
+}
+.point__item-number::after {
+  position: absolute;
+  content: "point";
+  top: 30px;
+  left: -23px;
+  color: #333333;
+  background-color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.point__item-image {
+  border-radius: 2px;
+}
+
+.point__item-content {
+  margin-top: 24px;
+}
+
+.point__item-title {
+  font-size: clamp(20px, 18.514px + 0.380952381vw, 24px);
+  font-size: clamp(1.25rem, 1.1571428571rem + 0.380952381vw, 1.5rem);
+  font-weight: 700;
+  color: #2273AE;
+}
+
+.point__item-text {
+  margin-top: clamp(16px, 13.028px + 0.7619047619vw, 24px);
+  margin-top: clamp(1rem, 0.8142857143rem + 0.7619047619vw, 1.5rem);
+  line-height: 170%;
+  letter-spacing: 0.48px;
+}
+.point__item-text--note {
+  color: #6C6E6F;
 }
 
 .problem__inner {
@@ -457,7 +538,7 @@ select::-ms-expand {
 }
 
 .solution__content-title {
-  font-family: "Noto Serif JP";
+  font-family: "Noto Serif JP", sans-serif;
   font-weight: 400;
   font-size: clamp(24px, 21.028px + 0.7619047619vw, 32px);
   font-size: clamp(1.5rem, 1.3142857143rem + 0.7619047619vw, 2rem);
