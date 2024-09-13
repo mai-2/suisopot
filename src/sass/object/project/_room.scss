@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.room__inner {
+    margin-top: 90px;
+}
+
+.room__text {
+    margin-top: rclamp(33, 40, 390, 1440);
+    text-align: center;
+    font-size: rclamp(14, 18, 390, 1440);
+    line-height: 120%;
+}

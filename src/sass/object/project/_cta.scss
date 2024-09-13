@@ -14,3 +14,79 @@
     transform-origin: top;
     width: 100%;
 }
+
+.cta__inner {
+    padding-top: 53.5px;
+    padding-bottom: 120px;
+}
+
+.cta__content {
+    position: relative;
+}
+
+.cta__title {
+    font-family: $base-font-family;
+    line-height: 85%;
+    letter-spacing: -0.72px;
+}
+
+.cta__title--strong {
+    font-weight: $bold;
+}
+
+.cta__button-boxes {
+    margin-top: 64.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.cta__button-text {
+    font-weight: $bold;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 22px;
+        background-color: $c-gray;
+    }
+
+    &::before {
+        transform: rotate(-20deg);
+    }
+
+    &::after {
+        transform: rotate(20deg);
+    }
+}
+
+.cta__button {
+    margin-top: rclamp(8, 12, 390, 1440);
+    font-size: rclamp(22, 30, 390, 1440);
+    padding: 20px 10px;
+    width: rclamp(300, 400, 390, 1440);
+    height: rclamp(56, 88, 390, 1440);
+}
+
+.cta__button--deco {
+    font-size: rclamp(20, 28, 390, 1440);
+}
+
+.cta__button-arrow {
+    transform: translateX(10px);
+}
+
+.cta__image {
+    position: absolute;
+    width: 77px;
+    height: 136px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}

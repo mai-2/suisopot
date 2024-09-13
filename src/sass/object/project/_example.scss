@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.example {
+    background: $c-base;
+}
+
+.example__inner {
+    padding-top: rclamp(56, 80, 390, 1440);
+    padding-bottom: rclamp(40, 83, 390, 1440);
+}
+
+.example__content {
+    background: $c-white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    padding: 40px 11.5px;
+}
+
+.example__heading {
+    text-align: center;
+}
+
+.example__lead {
+    font-family: $second-font-family;
+    font-size: rclamp(15, 30, 390, 1440);
+    margin-top: 1px;
+}
+
+.example__talk {
+    margin-top: 24.5px;
+
+    .talk--reverse {
+        margin-left: 0;
+    }
+}

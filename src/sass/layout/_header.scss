@@ -16,16 +16,8 @@
 }
 
 .header__button {
-    background: $c-accent;
     width: rclamp(128, 160, 390, 1440);
     height: rclamp(40, 56, 390, 1440);
-    // margin-left: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $c-white;
-    border-radius: rclamp(32, 40, 390, 1440);
-    font-weight: $bold;
 }
 
 .header__button-arrow {
