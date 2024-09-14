@@ -4,6 +4,10 @@
     margin-top: 90px;
 }
 
+.room__title {
+    max-width: 345px;
+}
+
 .room__text {
     margin-top: rclamp(33, 40, 390, 1440);
     text-align: center;

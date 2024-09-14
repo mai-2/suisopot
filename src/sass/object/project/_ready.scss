@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.ready {
+    background: $c-base;
+}
+
+.ready__inner {
+    padding-top: rclamp(40, 80, 390, 1440);
+}
+
+.ready__title {
+    max-width: 262px;
+}

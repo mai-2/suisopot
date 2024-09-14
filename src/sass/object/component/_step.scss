@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.steps {
+    margin-top: rclamp(40, 80, 390, 1440);
+}
+
+.step {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    &+& {
+        margin-top: 40px;
+    }
+}
+
+.step__image {
+    max-width: 118px;
+}
+
+.step__lead {
+    font-family: $font-family-comment;
+    font-size: rclamp(15, 23, 390, 1440);
+    letter-spacing: -1.35px;
+}
+
+.step__title {
+    margin-top: 3px;
+    font-size: rclamp(20, 24, 390, 1440);
+}
+
+.step__text {
+    margin-top: 8px;
+    line-height: 150%;
+}

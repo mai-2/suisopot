@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.compare__inner {
+    padding-top: rclamp(40, 120, 390, 1440);
+    padding-bottom: rclamp(40, 80, 390, 1440);
+}
+
+.compare__title {
+    max-width: 249px;
+}

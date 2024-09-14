@@ -1,22 +1,10 @@
 @use "global" as *;
 
-.use {
-    background: $c-base;
-}
-
 .use__inner {
-    padding-block: rclamp(56, 80, 390, 1440);
+    padding-top: rclamp(56, 80, 390, 1440);
+    padding-bottom: rclamp(40, 80, 390, 1440);
 }
 
-.use__content {
-    background: $c-white;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-    padding: 40px 15px;
-}
-
-.use__text {
-    margin-top: rclamp(25, 40, 390, 1440);
-    font-size: rclamp(15, 18, 390, 1440);
-    line-height: 150%;
+.use__title {
+    max-width: 312px;
 }

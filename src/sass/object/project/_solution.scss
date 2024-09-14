@@ -41,4 +41,8 @@
 
 .solution__content-talk {
     margin-top: rclamp(42, 44, 390, 1440);
+
+    .talk--reverse {
+        margin-left: 20px;
+    }
 }

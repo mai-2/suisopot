@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.voice {
+    background: $c-base;
+}
+
+.voice__inner {
+    padding-top: rclamp(32, 80, 390, 1440);
+    padding-bottom: rclamp(40, 80, 390, 1440);
+}
+
+.voice__title {
+    max-width: 177px;
+}
