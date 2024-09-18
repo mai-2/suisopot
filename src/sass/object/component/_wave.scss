@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.wave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.wave-top {
+    top: 0;
+    transform: translateY(-100%) translateY(2px) scale(1, 1);
+    transform-origin: top;
+}
+
+.wave-bottom {
+    bottom: 0;
+    transform: translateY(100%) translateY(-2px) scale(1, 1);
+    transform-origin: bottom;
+}

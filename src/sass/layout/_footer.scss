@@ -1,1 +1,62 @@
 @use "global" as *;
+
+.footer {
+    position: relative;
+}
+
+.footer__items {
+    margin-top: rclamp(56, 68, 390, 1440);
+    text-align: center;
+}
+
+.footer__item {
+    &+& {
+        margin-top: 24px;
+    }
+}
+
+.footer__item-link {
+    font-size: rclamp(13, 16, 390, 1440);
+    color: $c-gray;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer__logo {
+    margin-top: rclamp(40, 48, 390, 1440);
+    width: rclamp(95, 141, 390, 1440);
+    height: rclamp(95, 141, 390, 1440);
+}
+
+.footer__text {
+    font-size: rclamp(13, 16, 390, 1440);
+    color: $c-gray;
+    line-height: normal;
+    font-weight: $semi-bold;
+}
+
+.footer__bottom {
+    margin-top: 40px;
+    background-color: $c-base;
+    text-align: center;
+    padding-bottom: rclamp(7, 30, 390, 1440);
+}
+
+.footer__copyright {
+    color: $c-gray;
+    font-size: rclamp(7, 14, 390, 1440);
+}
+
+.footer__wave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: $layer-background;
+}

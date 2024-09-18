@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.movie__inner {
+    padding-block: 40px;
+}
+
+.movie__item {
+    &+& {
+        margin-top: 16px;
+    }
+}

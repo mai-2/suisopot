@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.button {
+.button-conversion {
     background: $c-accent;
     display: flex;
     align-items: center;
@@ -8,4 +8,14 @@
     color: $c-white;
     border-radius: rclamp(32, 40, 390, 1440);
     font-weight: $bold;
+}
+
+.button-link {
+    background: $c-gradation;
+    border-radius: 32px;
+    box-shadow: 0px 0px 4px 0px rgba(41, 81, 86, 0.25);
+    padding: 16px 24px;
+    color: $c-white;
+    min-width: 258px;
+    display: inline-block;
 }

@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.guide {
+    background-color: $c-base;
+    position: relative;
+}
+
+.guide__inner {
+    padding-top: rclamp(40, 80, 390, 1440);
+    padding-bottom: rclamp(24, 80, 390, 1440);
+}
+
+.guide__title {
+    max-width: 201px;
+}
+
+.guide__item {
+    &+& {
+        margin-top: 40px;
+    }
+}
+
+.guide__items {
+    margin-top: rclamp(40, 80, 390,1440);
+}
+
+.guide__item-title {
+    font-weight: $normal;
+    font-size: 20px;
+    display: flex;
+    gap: 8px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background: $c-gradation;
+    }
+}
+
+.guide__item-text {
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: 0.45px;
+    margin-top: 8px;
+
+    &+& {
+        margin-top: 30px;
+    }
+}
+
+.guide__item-lists {
+    border-top: 1px dashed $c-gray;
+    border-bottom: 1px dashed $c-gray;
+    padding-block: 16px;
+    margin-top: rclamp(4, 9, 390, 1440);
+    width: 215px;
+}
+
+.guide__item-list {
+    font-size: 15px;
+    letter-spacing: 0.45px;
+
+    &+& {
+        margin-top: 5px;
+    }
+}
+
+.guide__item-text--info {
+    font-size: 16px;
+    font-weight: $bold;
+    letter-spacing: 0.48px;
+    line-height: 170%;
+    margin-top: 40px;
+}
+
+.guide__item-text--attention {
+    font-size: 13px;
+    color: $c-gray;
+    margin-top: 12px;
+    line-height: normal;
+}

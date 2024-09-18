@@ -2,10 +2,12 @@
 
 .ready {
     background: $c-base;
+    position: relative;
 }
 
 .ready__inner {
     padding-top: rclamp(40, 80, 390, 1440);
+    padding-bottom: rclamp(24, 80, 390, 1440);
 }
 
 .ready__title {

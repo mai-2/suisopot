@@ -25,7 +25,7 @@
           <img src="./images/logo.png" alt="SUISOPOT">
         </a>
       </h1>
-      <a href="#" class="header__button button">新規お申込
+      <a href="#" class="header__button button-conversion">新規お申込
         <svg class="header__button-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
           <g clip-path="url(#clip0_8004_2695)">
             <path d="M1.94697 1.11914C1.82045 1.11914 1.69098 1.16613 1.59388 1.25736C1.39969 1.4398 1.39969 1.73835 1.59388 1.9208L8.24044 8.16544L1.69098 14.3189C1.49679 14.5013 1.49679 14.7999 1.69098 14.9823C1.88517 15.1648 2.20293 15.1648 2.39712 14.9823L9.3026 8.49716C9.49679 8.31472 9.49679 8.01617 9.3026 7.83372L2.30297 1.25736C2.20293 1.16337 2.07643 1.11914 1.94697 1.11914Z" fill="white"/>
@@ -265,7 +265,7 @@
     </section>
 
     <div class="cta">
-      <picture class="cta__top">
+      <picture class="cta__wave">
         <source media="(min-width: 768px)" srcset="./images/cta-pc.png">
         <img src="./images/cta-sp.png" alt="波線" decoding="async">
       </picture>
@@ -278,7 +278,7 @@
           <div class="cta__button-boxes">
             <div class="cta__button-box">
               <p class="cta__button-text">簡単入力３分で完了！</p>
-              <a href="#" class="cta__button button">無料
+              <a href="#" class="cta__button button-conversion">無料
                 <span class="cta__button--deco">で</span>資料請求
                 <span class="cta__button--deco">をする</span>
                 <svg class="cta__button-arrow" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
@@ -295,7 +295,7 @@
             </div>
             <div class="cta__button-box">
               <p class="cta__button-text">最短翌日発送！</p>
-              <a href="#" class="cta__button button">新規お申込
+              <a href="#" class="cta__button button-conversion">新規お申込
                 <svg class="cta__button-arrow" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
                   <g clip-path="url(#clip0_8004_3354)">
                     <path d="M5.68665 0.871337C5.51375 0.871337 5.33681 0.939693 5.20412 1.07238C4.93874 1.33777 4.93874 1.77203 5.20412 2.03741L14.2874 11.1207L5.33681 20.0713C5.07143 20.3367 5.07143 20.7709 5.33681 21.0363C5.60219 21.3017 6.03645 21.3017 6.30183 21.0363L15.739 11.6032C16.0043 11.3378 16.0043 10.9036 15.739 10.6382L6.17316 1.07238C6.03645 0.935672 5.86357 0.871337 5.68665 0.871337Z" fill="white"/>
@@ -518,9 +518,9 @@
     </section>
 
     <section class="ready">
-      <picture class="ready__top">
-        <source media="(min-width: 768px)" srcset="">
-        <img src="" alt="" decoding="async">
+      <picture class="wave wave-top">
+        <source media="(min-width: 768px)" srcset="./images/ready-top-pc.png">
+        <img src="./images/ready-top-sp.png" alt="波線" decoding="async">
       </picture>
       <div class="ready__inner section-inner">
         <h2 class="ready__title section-title section-title--deco">簡単準備4ステップ</h2>
@@ -567,38 +567,62 @@
           </li>
         </ul>
       </div>
+      <picture class="wave wave-bottom">
+        <source media="(min-width: 768px)" srcset="./images/ready-bottom-pc.png">
+        <img src="./images/ready-bottom-sp.png" alt="波線" decoding="async">
+      </picture>
     </section>
 
     <section class="movie">
-      <div class="movie__inner">
+      <div class="movie__inner section-inner">
         <ul class="movie__items">
           <li class="movie__item">
-            <img src="./images/movie-img1.png" alt="">
+            <img src="./images/movie-img01.png" alt="詳しいご使用方法">
+          </li>
+          <li class="movie__item">
+            <img src="./images/movie-img02.png" alt="詳しいお手入れ方法">
           </li>
         </ul>
       </div>
     </section>
 
     <section class="labo">
-      <div class="labo__inner">
+      <picture class="wave wave-top">
+        <source media="(min-width: 768px)" srcset="./images/labo-pc.png">
+        <img src="./images/labo-sp.png" alt="波線" decoding="async">
+      </picture>
+      <div class="labo__inner section-inner">
         <div class="labo__heading">
-          <h2 class="labo__title">ナノバブルLabo</h2>
+          <h2 class="labo__title">ナノ<span class="labo__title--span1">バブ</span>
+            <span class="labo__title--span2">ル</span>
+            <span class="labo__title--span3">Labo</span>
+          </h2>
           <p class="labo__lead">健康な暮らしのためのナノバブルとお水に関する情報サイト</p>
         </div>
         <ul class="labo__items">
           <li class="labo__item">
-            <img src="./images/labo-img1png" alt="">
+            <img src="./images/labo-img01.png" alt="還元水素水ペットも飲める？">
+          </li>
+          <li class="labo__item">
+            <img src="./images/labo-img02.png" alt="ウルトラファインバブル医療分野での活用">
+          </li>
+          <li class="labo__item">
+            <img src="./images/labo-img03.png" alt="還元水素水でカラダの活性酸素を除去">
           </li>
         </ul>
         <div class="labo__button">
-          <a href="#" class="button">ナノバブルLaboをもっと見る</a>
+          <a href="#" class="button-link">ナノバブルLaboをもっと見る</a>
         </div>
       </div>
+      <picture class="wave wave-bottom">
+        <source media="(min-width: 768px)" srcset="./images/labo-pc.png">
+        <img src="./images/labo-sp.png" alt="波線" decoding="async">
+      </picture>
     </section>
 
     <section class="faq">
-      <div class="faq__inner">
-        <h2 class="faq__title">よくある質問</h2>
+      <div class="faq__inner section-inner">
+        <h2 class="faq__title section-title section-title--deco">よくある質問</h2>
         <ul class="faq__items">
           <li class="faq__item"></li>
         </ul>
@@ -606,46 +630,152 @@
     </section>
 
     <section class="guide">
-      <div class="guide__inner">
-        <h2 class="guide__title">ご利用ガイド</h2>
+      <picture class="wave wave-top">
+        <source media="(min-width: 768px)" srcset="./images/guide-top-pc.png">
+        <img src="./images/guide-top-sp.png" alt="波線" decoding="async">
+      </picture>
+      <div class="guide__inner section-inner">
+        <h2 class="guide__title section-title section-title--deco">ご利用ガイド</h2>
         <ul class="guide__items">
           <li class="guide__item">
-            <h3 class="guide__item-title"></h3>
-            <p class="guide__item-text"></p>
+            <h3 class="guide__item-title">料金について</h3>
+            <p class="guide__item-text">SUISOPOT（スイソポット）のご利用には以下の料金がかかります。</p>
+            <ul class="guide__item-lists">
+              <li class="guide__item-list">・初期手数料　5,000円</li>
+              <li class="guide__item-list">・月額利用料　3,800円</li>
+            </ul>
+          </li>
+          <li class="guide__item">
+            <h3 class="guide__item-title">送料について</h3>
+            <p class="guide__item-text">生成器本体、ミネラルプレートのお届け時の送料は無料です。</p>
+          </li>
+          <li class="guide__item">
+            <h3 class="guide__item-title">配送方法について</h3>
+            <p class="guide__item-text">ご注文いただきました製品は、ヤマト運輸での発送とさせて頂いております。<br />
+              通常、お申込みから1～3営業日以内に製品出荷をいたします。交通状況や天候によってはご到着が遅れる場合もありますのでご了承くださいませ。</p>
+          </li>
+          <li class="guide__item">
+            <h3 class="guide__item-title">お支払い方法について</h3>
+            <p class="guide__item-text">インターネットからお申し込みの場合、「クレジットカード決済」のみとさせていただいております。<br />
+              銀行口座引き落としを希望される場合は、お電話での受付となりますので営業時間内に下記までご連絡ください。</p>
+            <p class="guide__item-text--info">
+              カスタマーセンター<br />
+              TEL：03-1234-5678<br />
+              営業時間 9：00～17：00 （平日のみ）
+            </p>
+          </li>
+          <li class="guide__item">
+            <h3 class="guide__item-title">解約・交換について</h3>
+            <p class="guide__item-text">・解約について<br />
+              ご契約中でも、途中解約はご自由に行うことができます。解約をご希望される場合は、カスタマーセンターにご連絡ください。<br />
+              解約手数料は不要です。解約ご希望日の1ヶ月前迄に解約申請をお願いします。
+            </p>
+            <p class="guide__item-text">・交換について<br />
+              万が一商品に不具合が発生した場合は、製品到着後速やかにカスタマーセンターにご連絡ください。
+            </p>
+            <p class="guide__item-text--attention">
+              ※製品をお送りいただく送料につきましては、製品の瑕疵がある場合は当社が負担しますが、お客様のご都合による交換の場合は、お客様のご負担となります。
+            </p>
           </li>
         </ul>
       </div>
+      <picture class="wave wave-bottom">
+        <source media="(min-width: 768px)" srcset="./images/guide-bottom-pc.png">
+        <img src="./images/guide-bottom-sp.png" alt="波線" decoding="async">
+      </picture>
     </section>
 
     <section class="info">
-      <div class="info__inner">
-        <h2 class="info__title">ニュース・メディア掲載実績</h2>
+      <div class="info__inner section-inner">
+        <h2 class="info__title section-title section-title--deco">ニュース・メディア掲載実績</h2>
         <ul class="info__items">
           <li class="info__item">
             <a href="#" class="info__item-link">
-              <time datetime="" class="info__item-date"></time>
-              <span class="info__item-category"></span>
-              <h3 class="info__item-title"></h3>
+              <div class="info__item-meta">
+                <time datetime="2023-06-13" class="info__item-date">2023.6.13</time>
+                <span class="info__item-category">Blog</span>
+              </div>
+              <h3 class="info__item-title">還元水素水はペットに与えても良い？おすすめの商品もご紹介</h3>
+            </a>
+          </li>
+          <li class="info__item">
+            <a href="#" class="info__item-link">
+              <div class="info__item-meta">
+                <time datetime="2023-06-13" class="info__item-date">2023.6.13</time>
+                <span class="info__item-category">News</span>
+              </div>
+              <h3 class="info__item-title">家庭用のレンタル水素水サーバーの選び方・おすすめランキング</h3>
+            </a>
+          </li>
+          <li class="info__item">
+            <a href="#" class="info__item-link">
+              <div class="info__item-meta">
+                <time datetime="2023-06-02" class="info__item-date">2023.6.02</time>
+                <span class="info__item-category">News</span>
+              </div>
+              <h3 class="info__item-title">「ウォーターサーバー比較」でSUISOPOTが紹介されました。</h3>
+            </a>
+          </li>
+          <li class="info__item">
+            <a href="#" class="info__item-link">
+              <div class="info__item-meta">
+                <time datetime="2023-06-01" class="info__item-date">2023.6.01</time>
+                <span class="info__item-category">News</span>
+              </div>
+              <h3 class="info__item-title">「ウォーターサーバー比較」でSUISOPOTが紹介されました。</h3>
             </a>
           </li>
         </ul>
         <div class="info__button">
-          <a href="#" class="button">もっと見る</a>
+          <a href="#" class="button-link">もっと見る</a>
         </div>
       </div>
     </section>
 
     <section class="product">
-      <div class="product__inner">
-        <h2 class="product__title">製品仕様</h2>
+      <div class="product__inner section-inner">
+        <h2 class="product__title section-title section-title--deco">製品仕様</h2>
         <div class="product__content">
           <figure class="product__image">
             <img src="./images/suisopot.png" alt="Suisopotの画像">
           </figure>
           <dl class="product__items">
             <div class="product__item">
-              <dt class="product__item-title"></dt>
-              <dd class="product__item-detail"></dd>
+              <dt class="product__item-title">商品名</dt>
+              <dd class="product__item-detail">SUISOPOT（スイソポット）</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-title">型番</dt>
+              <dd class="product__item-detail">ＳＷ-800</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-title">サイズ</dt>
+              <dd class="product__item-detail">約幅288×奥行356×高さ316(㎜)</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-title">本体質量</dt>
+              <dd class="product__item-detail">約3.3kg</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-title">電源</dt>
+              <dd class="product__item-detail">AC/DCアダプター入力AC100V 50/60Hz<br />
+                出力DC24V 0.7A</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-title">生成モード</dt>
+              <dd class="product__item-detail">60分　90分　120分</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-title">容量</dt>
+              <dd class="product__item-detail">5リットル</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-title">使用する水質</dt>
+              <dd class="product__item-detail">ミネラルウォーター、水道水</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-title">付属品</dt>
+              <dd class="product__item-detail">ミネラルプレート2個、ミネラルプレートケース2個、電極ホルダー2個</dd>
             </div>
           </dl>
         </div>
@@ -654,21 +784,42 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__inner">
+    <div class="footer__inner section-inner">
       <ul class="footer__items">
         <li class="footer__item">
-          <a href="" class="footer__item-li"></a>
+          <a href="" class="footer__item-link">特長</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__item-link">お客様の声</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__item-link">ご利用料金</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__item-link">ご利用までの流れ</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__item-link">よくある質問</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__item-link">特定商取引法に基づく表記</a>
         </li>
       </ul>
-      <figure class="footer__logo">
-        <img src="./images/footer-img.png" alt="Suiso Enter">
-      </figure>
-      <p class="footer__text">このサイトは株式会社コスモスエンタープライズ様のご協力のもと作成したコーディング用の練習課題です。
-        実在の人物・団体とは関係ありません。</p>
+      <div class="footer__content">
+        <figure class="footer__logo">
+          <img src="./images/footer-img.png" alt="Suiso Enter">
+        </figure>
+        <p class="footer__text">このサイトは株式会社コスモスエンタープライズ様のご協力のもと作成したコーディング用の練習課題です。
+          実在の人物・団体とは関係ありません。</p>
+      </div>
     </div>
     <div class="footer__bottom">
       <small class="footer__copyright">Copyright &copy;SUISO POT All rights reserved.</small>
     </div>
+    <picture class="footer__wave">
+      <source media="(min-width: 768px)" srcset="./images/footer-pc.png">
+      <img src="./images/footer-sp.png" alt="波線" decoding="async">
+    </picture>
   </footer>
 </body>
 </html>
