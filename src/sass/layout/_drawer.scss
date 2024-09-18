@@ -2,26 +2,114 @@
 
 .drawer-icon {
     width: 27px;
-    // height: 17px;
+    height: 16.5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    &.is-checked {
+        .drawer-icon__bar {
+            &:nth-of-type(1) {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(31deg);
+            }
+
+            &:nth-of-type(2) {
+                display: none;
+            }
+
+            &:nth-of-type(3) {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-31deg);
+            }
+        }
+    }
 }
 
 .drawer-icon__bar {
-    position: relative;
+    position: absolute;
     width: 27px;
     height: 1.5px;
     background: $c-font;
     border-radius: 4px;
     display: block;
-
-    &:nth-of-type(1) {
-        top: 0;
-    }
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     &:nth-of-type(2) {
-        margin-block: 6px;
+        top: 7.5px;
     }
+
+    &:nth-of-type(3) {
+        top: 15px;
+    }
+}
+
+.drawer-content {
+    width: 100%;
+    height: 100%;
+    top: 60px;
+    right: 0;
+    position: fixed;
+    z-index: $layer-up;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+
+    &.is-checked {
+        transform: translateX(0);
+    }
+}
+
+.drawer-content__items {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), linear-gradient(180deg, #007ADF 0%, #00ECBC 100%);
+    padding: 67px 15px 84px;
+}
+
+.drawer-content__item {
+    border-bottom: 1px solid $c-white;
+
+    &+& {
+        margin-top: 32px;
+    }
+}
+
+.drawer-content__link {
+    color: $c-gray;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    max-width: 261px;
+    margin: 0 auto;
+}
+
+.drawer-content__footer {
+    background: $c-white;
+    padding: 40px 31px;
+    text-align: center;
+}
+
+.drawer-content__number {
+    font-size: 24px;
+    font-weight: $bold;
+    margin-left: 8px;
+}
+
+.drawer-content__text {
+    font-size: 12px;
+}
+
+.drawer-content__button-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.drawer-content__button {
+    width: 160px;
+    padding: 18px 24px;
+    box-shadow: 0px 0px 4px 0px rgba(83, 46, 37, 0.25);
 }

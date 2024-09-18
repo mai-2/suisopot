@@ -1,7 +1,12 @@
 @use "global" as *;
 
 .header {
-    height: rclamp(60, 104, 390, 1440);
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    background: $c-white;
+    z-index: $layer-header;
 }
 
 .header__inner {

@@ -14,10 +14,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Yomogi&display=swap" rel="stylesheet">
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
-<body>
+<body id="js-body">
   <header class="header">
     <div class="header__inner">
       <h1 class="header__logo">
@@ -37,13 +37,110 @@
           </defs>
         </svg>
       </a>
-      <button class="header__open drawer-icon">
+      <button id="js-drawer-icon" class="header__open drawer-icon">
         <span class="drawer-icon__bar"></span>
         <span class="drawer-icon__bar"></span>
         <span class="drawer-icon__bar"></span>
       </button>
     </div>
   </header>
+
+  <div id="js-drawer-content" class="drawer-content">
+    <ul class="drawer-content__items">
+      <li class="drawer-content__item">
+        <a href="#feature" class="drawer-content__link">特長
+          <svg class="drawer-content__arrow" xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+            <g clip-path="url(#clip0_8004_3970)">
+              <path d="M1.2038 0.61914C1.07729 0.61914 0.947814 0.666134 0.850719 0.757357C0.65653 0.939804 0.65653 1.23835 0.850719 1.4208L7.49728 7.66544L0.947813 13.8189C0.753624 14.0013 0.753624 14.2999 0.947813 14.4823C1.142 14.6648 1.45977 14.6648 1.65396 14.4823L8.55944 7.99716C8.75363 7.81472 8.75363 7.51617 8.55944 7.33372L1.5598 0.757357C1.45977 0.66337 1.33326 0.61914 1.2038 0.61914Z" fill="#6C6E6F"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_8004_3970">
+                <rect width="15" height="9" fill="white" transform="translate(9) rotate(90)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </li>
+      <li class="drawer-content__item">
+        <a href="#voice" class="drawer-content__link">お客様の声
+          <svg class="drawer-content__arrow" xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+            <g clip-path="url(#clip0_8004_3970)">
+              <path d="M1.2038 0.61914C1.07729 0.61914 0.947814 0.666134 0.850719 0.757357C0.65653 0.939804 0.65653 1.23835 0.850719 1.4208L7.49728 7.66544L0.947813 13.8189C0.753624 14.0013 0.753624 14.2999 0.947813 14.4823C1.142 14.6648 1.45977 14.6648 1.65396 14.4823L8.55944 7.99716C8.75363 7.81472 8.75363 7.51617 8.55944 7.33372L1.5598 0.757357C1.45977 0.66337 1.33326 0.61914 1.2038 0.61914Z" fill="#6C6E6F"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_8004_3970">
+                <rect width="15" height="9" fill="white" transform="translate(9) rotate(90)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </li>
+      <li class="drawer-content__item">
+        <a href="#price" class="drawer-content__link">ご利用料金
+          <svg class="drawer-content__arrow" xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+            <g clip-path="url(#clip0_8004_3970)">
+              <path d="M1.2038 0.61914C1.07729 0.61914 0.947814 0.666134 0.850719 0.757357C0.65653 0.939804 0.65653 1.23835 0.850719 1.4208L7.49728 7.66544L0.947813 13.8189C0.753624 14.0013 0.753624 14.2999 0.947813 14.4823C1.142 14.6648 1.45977 14.6648 1.65396 14.4823L8.55944 7.99716C8.75363 7.81472 8.75363 7.51617 8.55944 7.33372L1.5598 0.757357C1.45977 0.66337 1.33326 0.61914 1.2038 0.61914Z" fill="#6C6E6F"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_8004_3970">
+                <rect width="15" height="9" fill="white" transform="translate(9) rotate(90)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </li>
+      <li class="drawer-content__item">
+        <a href="#step" class="drawer-content__link">ご利用までの流れ
+          <svg class="drawer-content__arrow" xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+            <g clip-path="url(#clip0_8004_3970)">
+              <path d="M1.2038 0.61914C1.07729 0.61914 0.947814 0.666134 0.850719 0.757357C0.65653 0.939804 0.65653 1.23835 0.850719 1.4208L7.49728 7.66544L0.947813 13.8189C0.753624 14.0013 0.753624 14.2999 0.947813 14.4823C1.142 14.6648 1.45977 14.6648 1.65396 14.4823L8.55944 7.99716C8.75363 7.81472 8.75363 7.51617 8.55944 7.33372L1.5598 0.757357C1.45977 0.66337 1.33326 0.61914 1.2038 0.61914Z" fill="#6C6E6F"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_8004_3970">
+                <rect width="15" height="9" fill="white" transform="translate(9) rotate(90)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </li>
+      <li class="drawer-content__item">
+        <a href="#faq" class="drawer-content__link">よくある質問
+          <svg class="drawer-content__arrow" xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+            <g clip-path="url(#clip0_8004_3970)">
+              <path d="M1.2038 0.61914C1.07729 0.61914 0.947814 0.666134 0.850719 0.757357C0.65653 0.939804 0.65653 1.23835 0.850719 1.4208L7.49728 7.66544L0.947813 13.8189C0.753624 14.0013 0.753624 14.2999 0.947813 14.4823C1.142 14.6648 1.45977 14.6648 1.65396 14.4823L8.55944 7.99716C8.75363 7.81472 8.75363 7.51617 8.55944 7.33372L1.5598 0.757357C1.45977 0.66337 1.33326 0.61914 1.2038 0.61914Z" fill="#6C6E6F"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_8004_3970">
+                <rect width="15" height="9" fill="white" transform="translate(9) rotate(90)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <div class="drawer-content__footer">
+      <div class="drawer-content__contact">
+        <a href="tel:03-1234-5678" class="drawer-content__tel">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+            <g clip-path="url(#clip0_8004_3953)">
+              <path d="M5.15312 1.26701C4.9125 0.685763 4.27812 0.376388 3.67188 0.542013L0.921875 1.29201C0.378125 1.44201 0 1.93576 0 2.49826C0 10.2295 6.26875 16.4983 14 16.4983C14.5625 16.4983 15.0563 16.1201 15.2063 15.5764L15.9563 12.8264C16.1219 12.2201 15.8125 11.5858 15.2312 11.3451L12.2312 10.0951C11.7219 9.88264 11.1313 10.0295 10.7844 10.4576L9.52188 11.9983C7.32188 10.9576 5.54063 9.17639 4.5 6.97639L6.04063 5.71701C6.46875 5.36701 6.61562 4.77951 6.40312 4.27014L5.15312 1.27014V1.26701Z" fill="#FF8B71"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_8004_3953">
+                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="drawer-content__number">03-1234-5678</span>
+        </a>
+        <p class="drawer-content__text">平日受付 9:00-17:00(祝日を除く)</p>
+      </div>
+      <div class="drawer-content__button-wrapper">
+        <a href="#" class="drawer-content__button button-conversion">資料請求</a>
+        <a href="#" class="drawer-content__button button-conversion">新規お申込</a>
+      </div>
+    </div>
+  </div>
 
   <main class="main">
     <div class="fv">
@@ -336,7 +433,7 @@
       </div>
     </section>
 
-    <section class="recommend">
+    <section id="feature" class="recommend">
       <div class="recommend__inner section-inner">
         <h2 class="recommend__title section-title section-title--deco">SUISOPOTがオススメな理由</h2>
         <ul class="recommend__items">
@@ -460,7 +557,7 @@
       </div>
     </div>
 
-    <section class="compare">
+    <section id="price" class="compare">
       <div class="compare__inner section-inner">
         <h2 class="compare__title section-title section-title--deco">他のお水との比較</h2>
       </div>
@@ -473,13 +570,13 @@
       </picture>
     </div>
 
-    <section class="voice">
+    <section id="voice" class="voice">
       <div class="voice__inner">
         <h2 class="voice__title section-title section-title--deco">お客様の声</h2>
       </div>
     </section>
 
-    <section class="use">
+    <section id="step" class="use">
       <div class="use__inner section-inner">
         <h2 class="use__title section-title section-title--deco">ご利用までの3ステップ</h2>
         <ul class="use__items steps">
@@ -620,7 +717,7 @@
       </picture>
     </section>
 
-    <section class="faq">
+    <section id="faq" class="faq">
       <div class="faq__inner section-inner">
         <h2 class="faq__title section-title section-title--deco">よくある質問</h2>
         <ul class="faq__items">

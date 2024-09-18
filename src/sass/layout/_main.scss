@@ -1,5 +1,15 @@
 @use "global" as *;
 
+body {
+    &.is-checked {
+        overflow: hidden;
+    }
+}
+
+.main {
+    padding-top: 60px;
+}
+
 .section-inner {
     padding-inline: 15px;
 }
