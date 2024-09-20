@@ -25,11 +25,6 @@ body {
   min-height: 0;
 }
 
-.example {
-  font-size: clamp(24px, 5.818px + 4.8484848485vw, 64px);
-  font-size: clamp(1.5rem, 0.3636363636rem + 4.8484848485vw, 4rem);
-}
-
 /* pcの電話番号発信対応 */
 @media screen and (min-width: 768px) {
   a[href^="tel:"] {
@@ -762,8 +757,10 @@ body.is-checked {
 }
 
 .example__inner {
-  padding-block: clamp(56px, 47.085px + 2.2857142857vw, 80px);
-  padding-block: clamp(3.5rem, 2.9428571429rem + 2.2857142857vw, 5rem);
+  padding-top: clamp(56px, 47.085px + 2.2857142857vw, 80px);
+  padding-top: clamp(3.5rem, 2.9428571429rem + 2.2857142857vw, 5rem);
+  padding-bottom: clamp(40px, 37.028px + 0.7619047619vw, 48px);
+  padding-bottom: clamp(2.5rem, 2.3142857143rem + 0.7619047619vw, 3rem);
 }
 
 .example__content {
@@ -778,12 +775,61 @@ body.is-checked {
   max-width: 250px;
 }
 
-.example__text {
+.example__lead {
   margin-top: clamp(25px, 19.428px + 1.4285714286vw, 40px);
   margin-top: clamp(1.5625rem, 1.2142857143rem + 1.4285714286vw, 2.5rem);
   font-size: clamp(15px, 13.885px + 0.2857142857vw, 18px);
   font-size: clamp(0.9375rem, 0.8678571429rem + 0.2857142857vw, 1.125rem);
   line-height: 150%;
+}
+
+.example__swiper {
+  margin-top: clamp(40px, 37.028px + 0.7619047619vw, 48px);
+  margin-top: clamp(2.5rem, 2.3142857143rem + 0.7619047619vw, 3rem);
+  padding-bottom: clamp(40px, 37.028px + 0.7619047619vw, 48px);
+  padding-bottom: clamp(2.5rem, 2.3142857143rem + 0.7619047619vw, 3rem);
+}
+
+.example__slide {
+  padding-inline: 45px;
+}
+
+.example__text {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.example__prev,
+.example__next {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+}
+
+.example__prev {
+  left: 5px;
+}
+
+.example__next {
+  right: 5px;
+}
+
+.example__pagination {
+  bottom: 0;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet {
+  background: #B6B7B7;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #6C6E6F;
 }
 
 .faq__inner {
@@ -1373,7 +1419,7 @@ body.is-checked {
   margin-top: 24.5px;
 }
 
-.room__inner {
+.room__heading {
   margin-top: 90px;
 }
 
@@ -1388,6 +1434,10 @@ body.is-checked {
   font-size: clamp(14px, 12.514px + 0.380952381vw, 18px);
   font-size: clamp(0.875rem, 0.7821428571rem + 0.380952381vw, 1.125rem);
   line-height: 120%;
+}
+
+.room__swiper {
+  margin-top: 40px;
 }
 
 .solution {

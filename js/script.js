@@ -29,3 +29,31 @@ $('a[href^="#"]').on('click', function () {
   }, speed);
   return false;
 }); // トップへ戻るボタン
+
+const swiper1 = new Swiper('#js-room-swiper', {
+  // Optional parameters
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  speed: 500,
+  centeredSlides: true,
+  slidesPerView: 1.25,
+  spaceBetween: 24,
+});
+
+const swiper2 = new Swiper('#js-example-swiper', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '#js-example-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '#js-example-next',
+    prevEl: '#js-example-prev',
+  },
+});

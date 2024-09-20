@@ -5,7 +5,8 @@
 }
 
 .example__inner {
-    padding-block: rclamp(56, 80, 390, 1440);
+    padding-top: rclamp(56, 80, 390, 1440);
+    padding-bottom: rclamp(40, 48, 390, 1440);
 }
 
 .example__content {
@@ -19,8 +20,54 @@
     max-width: 250px;
 }
 
-.example__text {
+.example__lead {
     margin-top: rclamp(25, 40, 390, 1440);
     font-size: rclamp(15, 18, 390, 1440);
     line-height: 150%;
+}
+
+.example__swiper {
+    margin-top: rclamp(40, 48, 390, 1440);
+    padding-bottom: rclamp(40, 48, 390, 1440);
+}
+
+.example__slide {
+    padding-inline: 45px;
+}
+
+.example__text {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.example__prev,
+.example__next {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.example__prev {
+    left: 5px;
+}
+
+.example__next {
+    right: 5px;
+}
+
+.example__pagination {
+    bottom: 0;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+}
+
+.swiper-pagination-bullet {
+    background: #B6B7B7;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: $c-gray;
 }

@@ -9,12 +9,14 @@
   <meta name="description" content="SUISOPOTで、健康と美しさを。自宅で手軽にナノバブル水素水のある生活を始めてみませんか。初期手数料5,000円が無料になるキャンペン実施中！" />
   <meta name="robots" content="noindex">
   <!-- css -->
-  <link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Yomogi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 <body id="js-body">
@@ -414,21 +416,95 @@
     </div>
 
     <section class="room">
-      <div class="room__inner section-inner">
+      <div class="room__heading section-inner">
         <h2 class="room__title section-title section-title--deco">どんなお部屋にもピッタリ</h2>
         <p class="room__text">ホワイトとシルバーを基調にしたデザイン<br />
           ＆コンパクトサイズ<br />どんなインテリアにも馴染むシンプルなデザイン
         </p>
+      </div>
+      <div id="js-room-swiper" class="room__swiper swiper">
+        <div id="js-room-wrapper" class="room__wrapper swiper-wrapper">
+          <div class="room__slide swiper-slide">
+            <img src="./images/room-img01.png" alt="さまざまな部屋の様子" class="room__image">
+          </div>
+          <div class="room__slide swiper-slide">
+            <img src="./images/room-img02.png" alt="さまざまな部屋の様子" class="room__image">
+          </div>
+          <div class="room__slide swiper-slide">
+            <img src="./images/room-img03.png" alt="さまざまな部屋の様子" class="room__image">
+          </div>
+          <div class="room__slide swiper-slide">
+            <img src="./images/room-img01.png" alt="さまざまな部屋の様子" class="room__image">
+          </div>
+          <div class="room__slide swiper-slide">
+            <img src="./images/room-img02.png" alt="さまざまな部屋の様子" class="room__image">
+          </div>
+          <div class="room__slide swiper-slide">
+            <img src="./images/room-img03.png" alt="さまざまな部屋の様子" class="room__image">
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="example">
       <div class="example__inner section-inner">
         <div class="example__content">
-          <h2 class="example__title section-title section-title--deco">使い方はいろいろ</h2>
-          <p class="example__text">健康的な生活のための飲用水としてはもちろん、お茶やお料理にもお使いいただけます。<br />
-            さらに、ペットの飲用水、植物の水やり、お肌を整えるための洗顔など、ライフスタイルに合わせて、幅広く活用ができます。
-          </p>
+          <div class="example__heading">
+            <h2 class="example__title section-title section-title--deco">使い方はいろいろ</h2>
+            <p class="example__lead">健康的な生活のための飲用水としてはもちろん、お茶やお料理にもお使いいただけます。<br />
+              さらに、ペットの飲用水、植物の水やり、お肌を整えるための洗顔など、ライフスタイルに合わせて、幅広く活用ができます。
+            </p>
+          </div>
+          <!-- Slider main container -->
+          <div id="js-example-swiper" class="swiper example__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper example__wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide example__slide">
+                <img src="./images/example-img01.png" alt="お茶が入ったカップの画像" class="example__image">
+                <p class="example__text">お茶やコーヒー</p>
+              </div>
+              <div class="swiper-slide example__slide">
+                <img src="./images/example-img02.png" alt="野菜の画像" class="example__image">
+                <p class="example__text">野菜の洗浄</p>
+              </div>
+              <div class="swiper-slide example__slide">
+                <img src="./images/example-img03.png" alt="植物の画像" class="example__image">
+                <p class="example__text">植物の水やり</p>
+              </div>
+              <div class="swiper-slide example__slide">
+                <img src="./images/example-img04.png" alt="水を飲むペットの画像" class="example__image">
+                <p class="example__text">ペットの飲用水</p>
+              </div>
+              <div class="swiper-slide example__slide">
+                <img src="./images/example-img05.png" alt="顔を洗う女性の画像" class="example__image">
+                <p class="example__text">洗顔</p>
+              </div>
+              <div class="swiper-slide example__slide">
+                <img src="./images/example-img06.png" alt="おにぎりの画像" class="example__image">
+                <p class="example__text">お料理</p>
+              </div>
+              <div class="swiper-slide example__slide">
+                <img src="./images/example-img07.png" alt="お酒が入ったグラスの画像" class="example__image">
+                <p class="example__text">お酒の割り水</p>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div id="js-example-pagination" class="swiper-pagination example__pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div id="js-example-prev" class="swiper-button-prev example__prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                <circle cx="14.5" cy="14.5" r="14.5" transform="matrix(-1 0 0 1 29 0)" fill="#82BFED"/>
+                <path d="M17.3275 8.32746L8.75 14.25L17.3275 20.1725L17.3275 14.25L17.3275 8.32746Z" fill="white"/>
+              </svg>
+            </div>
+            <div id="js-example-next" class="swiper-button-next example__next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                <circle cx="14.5" cy="14.5" r="14.5" fill="#82BFED"/>
+                <path d="M11.6725 8.32746L20.25 14.25L11.6725 20.1725L11.6725 14.25L11.6725 8.32746Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </section>

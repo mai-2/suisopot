@@ -111,8 +111,3 @@ $layer-background: -1;
   min-height: 0vw;
   min-height: 0;
 }
-
-// 使用例
-.example {
-  font-size: rclamp(24, 64, 375, 1200);
-}
