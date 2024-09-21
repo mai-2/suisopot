@@ -57,3 +57,5 @@ const swiper2 = new Swiper('#js-example-swiper', {
     prevEl: '#js-example-prev',
   },
 });
+
+new ScrollHint('#js-scrollable');

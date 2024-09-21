@@ -8,3 +8,112 @@
 .compare__title {
     max-width: 249px;
 }
+
+.compare__scrollable {
+    padding-top: rclamp(37, 88, 390, 1440);
+}
+
+.compare__table {
+    display: flex;
+    border-collapse: collapse;
+    width: fit-content;
+}
+
+.compare__table-head {
+    .compare__table-cell {
+        background: $c-green;
+        border-bottom: 1px solid $c-white;
+
+        &:first-child {
+            background: $c-white;
+        }
+
+        &:nth-child(2) {
+            border-radius: 8px 0 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 0 8px;
+        }
+    }
+}
+
+.compare__table-body {
+    display: flex;
+}
+
+.compare__table-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.compare__table-cell {
+    border-bottom: 1px solid $c-green;
+    border-right: 1px solid $c-green;
+    font-size: 15px;
+    line-height: 130%;
+    text-align: center;
+    place-content: center;
+    width: 159px;
+    height: 48px;
+    display: grid;
+}
+
+.compare__table-cell--header {
+    background: $c-green;
+    border-right: 1px solid $c-white;
+}
+
+.compare__table-column--highlight {
+    .compare__table-cell {
+        border-left: 5px solid $c-accent;
+        border-right: 5px solid $c-accent;
+        font-weight: $bold;
+        font-size: rclamp(16, 20, 390, 1440);
+
+        &:first-child {
+            background: $c-accent;
+            border-bottom: 5px solid $c-accent;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 160px;
+                height: 12px;
+                top: -11px;
+                left: -5px;
+                background-color: $c-accent;
+                border-radius: 8px 8px 0 0;
+            }
+
+            &::after {
+                position: absolute;
+                content: 'とてもお得！';
+                top: -25px;
+                left: -48px;
+                font-size: 20px;
+                font-weight: $normal;
+                font-family: $font-family-comment;
+                letter-spacing: -1.8px;
+                transform: rotate(-5deg);
+            }
+        }
+
+        &:nth-child(2) {
+            border-top: 5px solid $c-accent;
+        }
+
+        &:last-child {
+            border-bottom: 5px solid $c-accent;
+        }
+
+        img {
+            background: $c-white;
+            width: rclamp(125, 152, 390, 1440);
+            border-radius: 6.426px;
+            padding: 0px 7.293px 0px 5.96px;
+        }
+    }
+}

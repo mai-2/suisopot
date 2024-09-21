@@ -643,6 +643,117 @@ body.is-checked {
   max-width: 249px;
 }
 
+.compare__scrollable {
+  padding-top: clamp(37px, 18.057px + 4.8571428571vw, 88px);
+  padding-top: clamp(2.3125rem, 1.1285714286rem + 4.8571428571vw, 5.5rem);
+}
+
+.compare__table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-collapse: collapse;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.compare__table-head .compare__table-cell {
+  background: #C6ECEC;
+  border-bottom: 1px solid #fff;
+}
+.compare__table-head .compare__table-cell:first-child {
+  background: #fff;
+}
+.compare__table-head .compare__table-cell:nth-child(2) {
+  border-radius: 8px 0 0 0;
+}
+.compare__table-head .compare__table-cell:last-child {
+  border-radius: 0 0 0 8px;
+}
+
+.compare__table-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.compare__table-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.compare__table-cell {
+  border-bottom: 1px solid #C6ECEC;
+  border-right: 1px solid #C6ECEC;
+  font-size: 15px;
+  line-height: 130%;
+  text-align: center;
+  place-content: center;
+  width: 159px;
+  height: 48px;
+  display: grid;
+}
+
+.compare__table-cell--header {
+  background: #C6ECEC;
+  border-right: 1px solid #fff;
+}
+
+.compare__table-column--highlight .compare__table-cell {
+  border-left: 5px solid #FF8B71;
+  border-right: 5px solid #FF8B71;
+  font-weight: 700;
+  font-size: clamp(16px, 14.514px + 0.380952381vw, 20px);
+  font-size: clamp(1rem, 0.9071428571rem + 0.380952381vw, 1.25rem);
+}
+.compare__table-column--highlight .compare__table-cell:first-child {
+  background: #FF8B71;
+  border-bottom: 5px solid #FF8B71;
+  position: relative;
+}
+.compare__table-column--highlight .compare__table-cell:first-child::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 160px;
+  height: 12px;
+  top: -11px;
+  left: -5px;
+  background-color: #FF8B71;
+  border-radius: 8px 8px 0 0;
+}
+.compare__table-column--highlight .compare__table-cell:first-child::after {
+  position: absolute;
+  content: "とてもお得！";
+  top: -25px;
+  left: -48px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Yomogi", sans-serif;
+  letter-spacing: -1.8px;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+.compare__table-column--highlight .compare__table-cell:nth-child(2) {
+  border-top: 5px solid #FF8B71;
+}
+.compare__table-column--highlight .compare__table-cell:last-child {
+  border-bottom: 5px solid #FF8B71;
+}
+.compare__table-column--highlight .compare__table-cell img {
+  background: #fff;
+  width: clamp(125px, 114.971px + 2.5714285714vw, 152px);
+  width: clamp(7.8125rem, 7.1857142857rem + 2.5714285714vw, 9.5rem);
+  border-radius: 6.426px;
+  padding: 0px 7.293px 0px 5.96px;
+}
+
 .cta {
   background: #C6ECEC;
   position: relative;

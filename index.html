@@ -18,6 +18,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="./js/script.js"></script>
+  <!-- ScrollHint -->
+  <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+  <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 </head>
 <body id="js-body">
   <header class="header">
@@ -636,6 +639,56 @@
     <section id="price" class="compare">
       <div class="compare__inner section-inner">
         <h2 class="compare__title section-title section-title--deco">他のお水との比較</h2>
+        <div id="js-scrollable" class="compare__scrollable">
+          <table class="compare__table">
+            <thead class="compare__table-head">
+              <tr class="compare__table-column">
+                <th class="compare__table-cell"></th>
+                <th class="compare__table-cell">電気代</th>
+                <th class="compare__table-cell">メンテナス費用</th>
+                <th class="compare__table-cell">水道料金</th>
+                <th class="compare__table-cell">解約のしやすさ</th>
+                <th class="compare__table-cell">健康志向</th>
+              </tr>
+            </thead>
+            <tbody class="compare__table-body">
+              <tr class="compare__table-column compare__table-column--highlight">
+                <th class="compare__table-cell">
+                  <img src="./images/logo.png" alt="suisopot">
+                </th>
+                <td class="compare__table-cell">30円</td>
+                <td class="compare__table-cell">不要</td>
+                <td class="compare__table-cell">約25円/月</td>
+                <td class="compare__table-cell">いつでも可能</td>
+                <td class="compare__table-cell">◎</td>
+              </tr>
+              <tr class="compare__table-column">
+                <th class="compare__table-cell compare__table-cell--header">ペットボトル</th>
+                <td class="compare__table-cell">不要</td>
+                <td class="compare__table-cell">不要</td>
+                <td class="compare__table-cell">3,000/月〜</td>
+                <td class="compare__table-cell">不要</td>
+                <td class="compare__table-cell">◯</td>
+              </tr>
+              <tr class="compare__table-column">
+                <th class="compare__table-cell compare__table-cell--header">ウォーターサーバー</th>
+                <td class="compare__table-cell">1,000円</td>
+                <td class="compare__table-cell">月一回</td>
+                <td class="compare__table-cell">3,000/月〜</td>
+                <td class="compare__table-cell">定期契約</td>
+                <td class="compare__table-cell">不要</td>
+              </tr>
+              <tr class="compare__table-column">
+                <th class="compare__table-cell compare__table-cell--header">浄水器<br />(蛇口貯血型)</th>
+                <td class="compare__table-cell">0円</td>
+                <td class="compare__table-cell">2〜4ヶ月で<br />フィルターを交換</td>
+                <td class="compare__table-cell">約25円/月</td>
+                <td class="compare__table-cell">不要</td>
+                <td class="compare__table-cell">△</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
