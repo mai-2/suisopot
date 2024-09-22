@@ -10,7 +10,7 @@
 }
 
 .info__item {
-    border-bottom: 1px solid #B6B7B7;
+    border-bottom: 1px solid $c-border;
     padding-bottom: rclamp(6, 22, 390, 1440);
 
     &+& {

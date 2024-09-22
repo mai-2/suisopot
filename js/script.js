@@ -30,6 +30,8 @@ $('a[href^="#"]').on('click', function () {
   return false;
 }); // トップへ戻るボタン
 
+new ScrollHint('#js-scrollable');
+
 const swiper1 = new Swiper('#js-room-swiper', {
   // Optional parameters
   loop: true,
@@ -58,4 +60,39 @@ const swiper2 = new Swiper('#js-example-swiper', {
   },
 });
 
-new ScrollHint('#js-scrollable');
+const swiper3 = new Swiper('#js-voice-swiper', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '#js-voice-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '#js-voice-next',
+    prevEl: '#js-voice-prev',
+  },
+});
+
+$(document).ready(function() {
+  $('.voice__icon--open').click(function() {
+    $(this).closest('.voice__slide').find('.voice__text').slideToggle(),
+    $(this).hide(),
+    $(this).siblings('.voice__icon--close').show()
+  });
+
+  $('.voice__icon--close').click(function() {
+    $(this).closest('.voice__slide').find('.voice__text').slideToggle(),
+    $(this).hide(),
+    $(this).siblings('.voice__icon--open').show()
+  });
+});
+
+$(document).ready(function() {
+  $('.faq__head').click(function() {
+    $(this).next().slideToggle();
+    $(this).children('.faq__head-arrow').toggleClass('is-open')
+  });
+});
