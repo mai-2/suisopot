@@ -15,10 +15,15 @@
 
 .voice__swiper {
     margin-top: rclamp(40, 80, 390, 1440);
+    max-width: 1130px;
 }
 
 .voice__slide {
     padding-inline: 80px;
+
+    @include mq("md") {
+        padding-inline: 9px;
+    }
 }
 
 .voice__card {

@@ -6,18 +6,35 @@
 
 .footer__items {
     margin-top: rclamp(56, 68, 390, 1440);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    @include mq("lg") {
+        flex-direction: row;
+        gap: 0;
+    }
 }
 
 .footer__item {
-    &+& {
-        margin-top: 24px;
+    &:first-child {
+        .footer__item-link {
+            border-left: none;
+        }
     }
 }
 
 .footer__item-link {
     font-size: rclamp(13, 16, 390, 1440);
     color: $c-gray;
+
+    @include mq("lg") {
+        border-left: 1px solid $c-gray;
+        padding-left: 16px;
+        padding-right: 15px;
+    }
 }
 
 .footer__content {
@@ -25,6 +42,8 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    max-width: 788px;
+    margin-inline: auto;
 }
 
 .footer__logo {

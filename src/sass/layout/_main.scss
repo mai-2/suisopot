@@ -8,16 +8,32 @@ body {
 
 .main {
     padding-top: 60px;
+
+    @include mq("md") {
+        padding-top: 104px;
+    }
 }
 
 .section-inner {
+    // padding-inline: rclamp(15, 45, 390, 1440);
     padding-inline: 15px;
+    max-width: 1082px;
+    width: 100%;
+    margin-inline: auto;
+
+    @include mq("md") {
+        padding-inline: 45px;
+    }
 }
 
 .section-title {
     font-family: $second-font-family;
     font-weight: $normal;
-    font-size: rclamp(24, 40, 390, 1440);
+    font-size: 24px;
+
+    @include mq("xl") {
+        font-size: 40px;
+    }
 }
 
 .section-title--deco {
@@ -35,18 +51,39 @@ body {
     &::after {
         position: absolute;
         content: '';
-        width: rclamp(25, 33, 390, 1440);
-        height: rclamp(40, 53, 390, 1440);
+        width: 24.922px;
+        height: 40px;
         background-size: contain;
+
+        @include mq("xl") {
+            max-width: 33px;
+            height: 52.966px;
+            width: 100%;
+            display: block;
+        }
     }
 
     &::before {
         background-image: url(../images/heading-left.png);
         left: -7px;
+
+        @include mq("md") {
+            left: -26px;
+            margin-right: 16px;
+        }
     }
 
     &::after {
         background-image: url(../images/heading-right.png);
         right: -7px;
+
+        @include mq("md") {
+            right: -26px;
+            margin-left: 16px;
+        }
+    }
+
+    @include mq("xl") {
+        flex-wrap: nowrap;
     }
 }

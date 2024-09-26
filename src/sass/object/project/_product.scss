@@ -17,17 +17,25 @@
     margin-top: rclamp(40, 80, 390, 1440);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 40px;
+
+    @include mq("md") {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 52px;
+    }
 }
 
 .product__image {
     width: 150px;
     height: 265px;
-}
 
-.product__items {
-    width: 100%;
+    @include mq("md") {
+        width: 225px;
+        height: 395px;
+    }
 }
 
 .product__item {

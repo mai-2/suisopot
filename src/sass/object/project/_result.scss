@@ -23,9 +23,20 @@
 .result__lead {
     font-family: $second-font-family;
     font-size: rclamp(15, 30, 390, 1440);
+    color: $c-gray;
     margin-top: 1px;
+
+    @include mq("md") {
+        line-height: 170%;
+    }
 }
 
 .result__talk {
     margin-top: 24.5px;
+    margin-inline: auto;
+    max-width: 815px;
+
+    @include mq("md") {
+        margin-top: 56px;
+    }
 }

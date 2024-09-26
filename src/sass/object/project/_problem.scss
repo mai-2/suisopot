@@ -16,16 +16,28 @@
     margin: 0 auto;
     margin-top: rclamp(20, 25, 390, 1440);
     display: flex;
-    max-width: rclamp(420, 889, 390, 1440);
+    max-width: rclamp(420, 992, 390, 1440);
     width: 100%;
     padding-right: 15px;
+    position: relative;
+    height: rclamp(241, 368, 390, 1440);
+
+    @include mq("xl") {
+        gap: 64px;
+    }
 }
 
 .problem__image {
     position: absolute;
-    width: rclamp(163, 368, 390, 1440);
-    height: rclamp(241, 368, 390, 1440);
-    z-index: $layer-background;
+    display: block;
+
+    img {
+        height: rclamp(241, 368, 390, 1440);
+    }
+
+    @include mq("xl") {
+        position: static;
+    }
 }
 
 .problem__items {
@@ -36,6 +48,7 @@
     align-items: flex-end;
     margin-top: 30px;
     padding-bottom: rclamp(31, 41, 390, 1440);
+    z-index: $layer-up;
 }
 
 .problem__item {
@@ -46,9 +59,16 @@
     align-items: baseline;
     padding: 9.474px 9.474px 9.474px 8px;
     background: $c-white;
+    max-width: 560px;
 
     &+& {
         margin-top: rclamp(19, 29, 390, 1440);
+    }
+
+    @include mq("xl") {
+        padding: 24px;
+        display: inline-flex;
+        align-items: flex-start;
     }
 }
 
@@ -66,10 +86,11 @@
 
 .problem__foot {
     background-color: $c-blue;
-    padding-block: 17px;
     text-align: center;
     position: relative;
     width: 100%;
+    padding-block: 17px;
+
 
     &::after {
         position: absolute;
@@ -77,14 +98,32 @@
         width: 0;
         height: 0;
         left: 50%;
-        transform: translateX(-50%) translateY(17px);
+        transform: translateX(-50%) translateY(16px);
         border-left: 24px solid transparent;
         border-right: 24px solid transparent;
-        border-top: 24px solid $c-blue;
+        border-top: 27px solid $c-blue;
+    }
+
+    @include mq("xl") {
+        background-color: rgba(130, 191, 237, 0.4);
+        padding-top: 25px;
+        padding-bottom: 33px;
+
+        &::after {
+            border-top: 50px solid rgba(130, 191, 237, 0.4);
+            border-left: 45px solid transparent;
+            border-right: 45px solid transparent;
+            transform: translateX(-50%) translateY(33px);
+        }
     }
 }
 
 .problem__text {
     font-size: rclamp(17, 32, 390, 1440);
     letter-spacing: -0.51px;
+
+    @include mq("md") {
+        letter-spacing: 0.96px;
+        line-height: 170%;
+    }
 }

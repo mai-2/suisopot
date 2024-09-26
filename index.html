@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
   <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 </head>
-<body id="js-body">
+<body>
   <header class="header">
     <div class="header__inner">
       <h1 class="header__logo">
@@ -30,18 +30,62 @@
           <img src="./images/logo.png" alt="SUISOPOT">
         </a>
       </h1>
-      <a href="#" class="header__button button-conversion">新規お申込
-        <svg class="header__button-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-          <g clip-path="url(#clip0_8004_2695)">
-            <path d="M1.94697 1.11914C1.82045 1.11914 1.69098 1.16613 1.59388 1.25736C1.39969 1.4398 1.39969 1.73835 1.59388 1.9208L8.24044 8.16544L1.69098 14.3189C1.49679 14.5013 1.49679 14.7999 1.69098 14.9823C1.88517 15.1648 2.20293 15.1648 2.39712 14.9823L9.3026 8.49716C9.49679 8.31472 9.49679 8.01617 9.3026 7.83372L2.30297 1.25736C2.20293 1.16337 2.07643 1.11914 1.94697 1.11914Z" fill="white"/>
-          </g>
-          <defs>
-            <clipPath id="clip0_8004_2695">
-              <rect width="15" height="9" fill="white" transform="translate(9.74316 0.5) rotate(90)"/>
-            </clipPath>
-          </defs>
-        </svg>
-      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-items">
+          <li class="header__nav-item">
+            <a href="#feature" class="header__nav-link">特長</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#voice" class="header__nav-link">お客様の声</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#price" class="header__nav-link">ご利用料金</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#step" class="header__nav-link">ご利用までの流れ</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#faq" class="header__nav-link">よくある質問</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__contact">
+        <div class="header__info">
+          <a href="tel:03-1234-5678" class="header__tel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+              <path d="M5.15312 1.26897C4.9125 0.687716 4.27812 0.378341 3.67188 0.543966L0.921875 1.29397C0.378125 1.44397 0 1.93772 0 2.50022C0 10.2315 6.26875 16.5002 14 16.5002C14.5625 16.5002 15.0563 16.1221 15.2063 15.5783L15.9563 12.8283C16.1219 12.2221 15.8125 11.5877 15.2312 11.3471L12.2312 10.0971C11.7219 9.88459 11.1313 10.0315 10.7844 10.4596L9.52188 12.0002C7.32188 10.9596 5.54063 9.17834 4.5 6.97834L6.04063 5.71897C6.46875 5.36897 6.61562 4.78147 6.40312 4.27209L5.15312 1.27209V1.26897Z" fill="#FF8B71"/>
+            </svg>
+            <span class="header__number">03-1234-5678</span>
+          </a>
+          <span class="header__text">平日受付 9:00-17:00(祝日を除く)</span>
+        </div>
+        <div class="header__buttons">
+          <a href="#" class="header__button button-conversion">資料請求
+            <svg class="header__button-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+              <g clip-path="url(#clip0_8004_2695)">
+                <path d="M1.94697 1.11914C1.82045 1.11914 1.69098 1.16613 1.59388 1.25736C1.39969 1.4398 1.39969 1.73835 1.59388 1.9208L8.24044 8.16544L1.69098 14.3189C1.49679 14.5013 1.49679 14.7999 1.69098 14.9823C1.88517 15.1648 2.20293 15.1648 2.39712 14.9823L9.3026 8.49716C9.49679 8.31472 9.49679 8.01617 9.3026 7.83372L2.30297 1.25736C2.20293 1.16337 2.07643 1.11914 1.94697 1.11914Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_8004_2695">
+                  <rect width="15" height="9" fill="white" transform="translate(9.74316 0.5) rotate(90)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a href="#" class="header__button button-conversion">新規お申込
+            <svg class="header__button-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+              <g clip-path="url(#clip0_8004_2695)">
+                <path d="M1.94697 1.11914C1.82045 1.11914 1.69098 1.16613 1.59388 1.25736C1.39969 1.4398 1.39969 1.73835 1.59388 1.9208L8.24044 8.16544L1.69098 14.3189C1.49679 14.5013 1.49679 14.7999 1.69098 14.9823C1.88517 15.1648 2.20293 15.1648 2.39712 14.9823L9.3026 8.49716C9.49679 8.31472 9.49679 8.01617 9.3026 7.83372L2.30297 1.25736C2.20293 1.16337 2.07643 1.11914 1.94697 1.11914Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_8004_2695">
+                  <rect width="15" height="9" fill="white" transform="translate(9.74316 0.5) rotate(90)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
       <button id="js-drawer-icon" class="header__open drawer-icon">
         <span class="drawer-icon__bar"></span>
         <span class="drawer-icon__bar"></span>
@@ -140,7 +184,7 @@
         </a>
         <p class="drawer-content__text">平日受付 9:00-17:00(祝日を除く)</p>
       </div>
-      <div class="drawer-content__button-wrapper">
+      <div class="drawer-content__buttons">
         <a href="#" class="drawer-content__button button-conversion">資料請求</a>
         <a href="#" class="drawer-content__button button-conversion">新規お申込</a>
       </div>
@@ -189,7 +233,7 @@
               <figure class="problem__item-image">
                 <img src="./images/check-box.png" alt="チェックボックス">
               </figure>
-              <h3 class="problem__lead">腸活何からしたら良いか<br />わからない</h3>
+              <h3 class="problem__lead">腸活何からしたら良いか<br class="u-mobile"/>わからない</h3>
             </li>
           </ul>
         </div>
@@ -207,7 +251,7 @@
           </figure>が解決します
         </h2>
         <p class="solution__lead">
-          SUISOPOTは手軽にナノバブル水素水を<br />作れるサーバーです
+          SUISOPOTは手軽にナノバブル水素水を<br class="u-mobile"/>作れるサーバーです
         </p>
         <ul class="solution__items">
           <li class="solution__item">
@@ -221,7 +265,7 @@
           </li>
         </ul>
         <div class="solution__content">
-          <h3 class="solution__content-title">そもそも、<br />ナノバブル水素水って？</h3>
+          <h3 class="solution__content-title">そもそも、<br class="u-mobile"/>ナノバブル水素水って？</h3>
           <div class="solution__content-talk talks">
             <div class="talk">
               <figure class="talk__icon">
@@ -290,24 +334,26 @@
 
     <section class="point">
       <div class="point__inner section-inner">
-        <h2 class="point__title section-title">ナノバブル水素水って<br />何が良いの？</h2>
+        <h2 class="point__title section-title">ナノバブル水素水って<br class="u-mobile"/>何が良いの？</h2>
         <ul class="point__items">
           <li class="point__item">
-            <span class="point__item-number">01</span>
+            <span class="point__item-number u-mobile">01</span>
             <figure class="point__item-image">
               <img src="./images/point-item01.jpg" alt="ナノバブル水素のイメージ">
             </figure>
             <div class="point__item-content">
+              <span class="point__item-number u-desktop">01</span>
               <h3 class="point__item-title">ナノバブル水素で長期間活性酸素を抑える</h3>
               <p class="point__item-text">「ナノバブル水素水」は、1ccあたり3億3,000万個という高濃度のナノバブルを含んでいます。この微細な泡は、水素を長期間保持し、体内に浸透させることができます。長期間酸化を抑えることができるので、近年注目度が高まっています。</p>
             </div>
           </li>
           <li class="point__item">
-            <span class="point__item-number">02</span>
+            <span class="point__item-number u-mobile">02</span>
             <figure class="point__item-image">
               <img src="./images/point-item02.png" alt="腸内フローラのイメージ">
             </figure>
             <div class="point__item-content">
+              <span class="point__item-number u-desktop">02</span>
               <h3 class="point__item-title">腸内に働きかける</h3>
               <p class="point__item-text">ヒトフローラマウスを用いた共同研究の試験では、腸内のビフィズス菌が増加、悪玉菌が減少した結果となりました。<br />
                 <span class="point__item-text--note">(15日間ナノバブル水素水を飲水させた試験)</span>
@@ -315,11 +361,12 @@
             </div>
           </li>
           <li class="point__item">
-            <span class="point__item-number">03</span>
+            <span class="point__item-number u-mobile">03</span>
             <figure class="point__item-image">
               <img src="./images/point-item03.jpg" alt="塩素を除去するイメージ">
             </figure>
             <div class="point__item-content">
+              <span class="point__item-number u-desktop">03</span>
               <h3 class="point__item-title">フィルター不要で93％の塩素を除去</h3>
               <p class="point__item-text">塩素を93％も除去することができ、水道水を美味しく健康的なナノバブル水素水に生まれ変わらせます。<br />
                 <span class="point__item-text--note">
@@ -329,11 +376,12 @@
             </div>
           </li>
           <li class="point__item">
-            <span class="point__item-number">04</span>
+            <span class="point__item-number u-mobile">04</span>
             <figure class="point__item-image">
               <img src="./images/point-item04.jpg" alt="ミネラル豊富な水のイメージ">
             </figure>
             <div class="point__item-content">
+              <span class="point__item-number u-desktop">04</span>
               <h3 class="point__item-title">ミネラル豊富な水</h3>
               <p class="point__item-text">SUISOPOT(スイソポット）に付属のミネラルプレートが生み出す、豊富なイオン化されたミネラル成分が溶け出すことにより、マグネシウムや亜鉛を含んだ味わい豊かなおいしいお水をつくりだすことができます。<br />
                 <span class="point__item-text--note">
@@ -343,21 +391,23 @@
             </div>
           </li>
           <li class="point__item">
-            <span class="point__item-number">05</span>
+            <span class="point__item-number u-mobile">05</span>
             <figure class="point__item-image">
               <img src="./images/point-item05.jpg" alt="身体への負担が少ない中性水のイメージ">
             </figure>
             <div class="point__item-content">
+              <span class="point__item-number u-desktop">05</span>
               <h3 class="point__item-title">身体への負担が少ない中性水</h3>
               <p class="point__item-text">一般的な水素水は、アルカリ性に傾いているものがほとんどです。アルカリ性の水素水もメリットはございますが、中性のお水の方が身体への負担は少ないと考えられており、ｐHの偏りを気にすることなくご飲用いただけます。</p>
             </div>
           </li>
           <li class="point__item">
-            <span class="point__item-number">06</span>
+            <span class="point__item-number u-mobile">06</span>
             <figure class="point__item-image">
               <img src="./images/point-item06.jpg" alt="">
             </figure>
             <div class="point__item-content">
+              <span class="point__item-number u-desktop">06</span>
               <h3 class="point__item-title">お肌に優しいので洗顔にもオススメ</h3>
               <p class="point__item-text">水に溶け込んだ無数の小さな泡が、お肌の角質の奥にまで入り込んでキレイにしてくれます。さっと洗い流すだけですっきりとした透明肌へと導いてくれます。</p>
             </div>
@@ -375,7 +425,7 @@
         <div class="cta__content">
           <h2 class="cta__title section-title section-title--deco">さっそく
             <strong class="cta__title--strong">ナノバブル水素水</strong>
-            <span>の</span><br />ある生活を始めてみましょう
+            <span>の</span><br class="u-mobile"/>ある生活を始めてみましょう
           </h2>
           <div class="cta__button-boxes">
             <div class="cta__button-box">
@@ -411,8 +461,11 @@
               </a>
             </div>
           </div>
+          <figure class="cta__image-pc">
+            <img src="./images/suisopot.png" alt="Suisopotの画像">
+          </figure>
         </div>
-        <figure class="cta__image">
+        <figure class="cta__image-sp">
           <img src="./images/suisopot.png" alt="Suisopotの画像">
         </figure>
       </div>
@@ -421,7 +474,7 @@
     <section class="room">
       <div class="room__heading section-inner">
         <h2 class="room__title section-title section-title--deco">どんなお部屋にもピッタリ</h2>
-        <p class="room__text">ホワイトとシルバーを基調にしたデザイン<br />
+        <p class="room__text">ホワイトとシルバーを基調にしたデザイン<br class="u-mobile"/>
           ＆コンパクトサイズ<br />どんなインテリアにも馴染むシンプルなデザイン
         </p>
       </div>
@@ -455,7 +508,7 @@
           <div class="example__heading">
             <h2 class="example__title section-title section-title--deco">使い方はいろいろ</h2>
             <p class="example__lead">健康的な生活のための飲用水としてはもちろん、お茶やお料理にもお使いいただけます。<br />
-              さらに、ペットの飲用水、植物の水やり、お肌を整えるための洗顔など、ライフスタイルに合わせて、幅広く活用ができます。
+              さらに、ペットの飲用水、植物の水やり、お肌を整えるための洗顔など、<br class="u-desktop"/>ライフスタイルに合わせて、幅広く活用ができます。
             </p>
           </div>
           <!-- Slider main container -->
@@ -586,7 +639,7 @@
       <div class="result__inner section-inner">
         <div class="result__content">
           <div class="result__heading">
-            <h2 class="result__title section-title">ナノバブル水素水の有用性や<br />
+            <h2 class="result__title section-title">ナノバブル水素水の有用性や<br class="u-mobile"/>
               新たな可能性を開拓
             </h2>
             <p class="result__lead">国内の大学や研究機関との共同研究の一例</p>
@@ -628,12 +681,10 @@
     </section>
 
     <div class="banner">
-      <div class="banner__inner section-inner">
-        <picture class="banner__image">
-          <source media="(min-width: 768px)" srcset="./images/banner-pc.png">
-          <img src="./images/banner-sp.png" alt="新料金プラン登場" decoding="async">
-        </picture>
-      </div>
+      <picture class="banner__image">
+        <source media="(min-width: 768px)" srcset="./images/banner-pc.png">
+        <img src="./images/banner-sp.png" alt="新料金プラン登場" decoding="async">
+      </picture>
     </div>
 
     <section id="price" class="compare">
@@ -880,7 +931,7 @@
               <img src="./images/use-img01.png" alt="申込する女性">
             </figure>
             <div class="step__content">
-              <span class="step__lead">たったの５分で完結！</span>
+              <span class="step__lead use__lead-1">たったの５分で完結！</span>
               <h3 class="step__title">お申込</h3>
               <p class="step__text">ネットもしくはお電話から<br />お申し込みいただけます</p>
             </div>
@@ -890,7 +941,7 @@
               <img src="./images/use-img02.png" alt="製品が届く様子">
             </figure>
             <div class="step__content">
-              <span class="step__lead">早い！</span>
+              <span class="step__lead use__lead-2">早い！</span>
               <h3 class="step__title">ご自宅に届きます</h3>
               <p class="step__text">お申込から通常1～3営業日にて製品が発送されます。</p>
             </div>
@@ -900,7 +951,7 @@
               <img src="./images/use-img03.png" alt="Suisopotの画像">
             </figure>
             <div class="step__content">
-              <span class="step__lead">すぐ使える！</span>
+              <span class="step__lead use__lead-3">すぐ使える！</span>
               <h3 class="step__title">ご利用開始</h3>
               <p class="step__text">ご自身で簡単に設置可能</p>
             </div>
@@ -922,7 +973,7 @@
               <img src="./images/ready-img01.png" alt="コンセントの画像">
             </figure>
             <div class="step__content">
-              <span class="step__lead">挿すだけ！</span>
+              <span class="step__lead ready__lead-1">挿すだけ！</span>
               <h3 class="step__title">電源をとる</h3>
               <p class="step__text">コンセントを挿します</p>
             </div>
@@ -932,7 +983,7 @@
               <img src="./images/ready-img02.png" alt="蛇口の画像">
             </figure>
             <div class="step__content">
-              <span class="step__lead">入れるだけ！</span>
+              <span class="step__lead ready__lead-2">入れるだけ！</span>
               <h3 class="step__title">タンクに水を入れる</h3>
               <p class="step__text">水道水を入れます<br />1回に5ℓまで生成できます</p>
             </div>
@@ -942,9 +993,9 @@
               <img src="./images/ready-img03.png" alt="Suisopotの画像">
             </figure>
             <div class="step__content">
-              <span class="step__lead">押すだけ！</span>
+              <span class="step__lead ready__lead-3">押すだけ！</span>
               <h3 class="step__title">ボタンを押す</h3>
-              <p class="step__text">還元時間を設定しスタートボタンを押すだけ</p>
+              <p class="step__text">還元時間を設定し<br class="u-desktop"/>スタートボタンを押すだけ</p>
             </div>
           </li>
           <li class="ready__item step">
@@ -952,7 +1003,7 @@
               <img src="./images/ready-img04.png" alt="水が入ったコップの画像">
             </figure>
             <div class="step__content">
-              <span class="step__lead">「ピッ」となったら完成！</span>
+              <span class="step__lead ready__lead-4">「ピッ」となったら完成！</span>
               <h3 class="step__title">完成</h3>
               <p class="step__text">還元完了時は音と<br />停止ランプでお知らせ</p>
             </div>

@@ -7,24 +7,147 @@
     top: 0;
     background: $c-white;
     z-index: $layer-header;
+    display: flex;
+    padding: 0 15px;
+
+    @include mq("md") {
+        height: 104px;
+        padding-block: 16px;
+        padding-left: 45px;
+        padding-right: 34px;
+    }
 }
 
 .header__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
+    gap: 11px;
+    width: 100%;
+
+    @include mq("md") {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+    }
+
+    @include mq("xl") {
+        grid-template-columns: auto auto 1fr;
+    }
 }
 
 .header__logo {
     width: rclamp(151, 187, 390, 1440);
+
+    @include mq("md") {
+        padding-right: 30px;
+    }
+}
+
+.header__nav {
+    display: none;
+
+    @include mq("md") {
+        display: flex;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        justify-content: flex-end;
+    }
+
+    @include mq("xl") {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+}
+
+.header__nav-items {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__nav-item {
+    display: flex;
+    align-items: center;
+
+    &::after {
+        display: block;
+        content: '';
+        background-color: $c-gray;
+        width: 1px;
+        height: 31px;
+    }
+
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.header__nav-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 16px;
+}
+
+.header__contact {
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 24px;
+    align-items: center;
+}
+
+.header__info {
+    display: none;
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.header__tel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__number {
+    font-family: $font-family-en;
+    font-size: 24px;
+    font-weight: $bold;
+}
+
+.header__text {
+    font-size: 12px;
+}
+
+.header__buttons {
+    display: flex;
+    gap: 8px;
 }
 
 .header__button {
     width: rclamp(128, 160, 390, 1440);
     height: rclamp(40, 56, 390, 1440);
+
+    &:first-child {
+        display: none;
+
+        @include mq("md") {
+            display: flex;
+        }
+    }
 }
 
 .header__button-arrow {
     margin-left: 7px;
+
+    @include mq("md") {
+        display: none;
+    }
 }

@@ -13,3 +13,43 @@
 .ready__title {
     max-width: 262px;
 }
+
+.ready__items {
+    @include mq("md") {
+        max-width: 501px;
+        gap: 90px 31px;
+        margin: 80px auto 0 auto;
+        flex-wrap: wrap;
+    }
+
+    @include mq("lg") {
+        flex-wrap: nowrap;
+        max-width: 1123px;
+    }
+}
+
+.ready__item {
+    width: 100%;
+}
+
+@include mq("md") {
+    .ready__lead-1 {
+        left: 64px;
+        top: -44px;
+    }
+
+    .ready__lead-2 {
+        left: 54px;
+        top: -45px;
+    }
+
+    .ready__lead-3 {
+        left: 64.5px;
+        top: -44px;
+    }
+
+    .ready__lead-4 {
+        left: -9.5px;
+        top: -50px;
+    }
+}

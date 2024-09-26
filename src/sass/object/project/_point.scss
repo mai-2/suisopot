@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .point__inner {
-    padding-top: rclamp(56, 80, 390, 1440);
-    padding-bottom: 40px;
+    padding-top: rclamp(56, 78, 390, 1440);
+    padding-bottom: rclamp(40, 78, 390, 1440);
 }
 
 .point__title {
@@ -11,11 +11,56 @@
 
 .point__items {
     margin-top: rclamp(24, 40, 390, 1440);
+    position: relative;
+
+    @include mq("xl") {
+        &::before {
+            position: absolute;
+            content: '';
+            width: 634.446px;
+            height: 1517.184px;
+            top: 13.5%;
+            left: 24.8%;
+            background-image: url(../images/point-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: $layer-background;
+        }
+    }
 }
 
 .point__item {
     &+& {
         margin-top: 40px;
+    }
+
+    @include mq("md") {
+        display: inline-flex;
+        gap: 32px;
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+
+        &:nth-child(2) {
+            margin-top: 28px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 32px;
+        }
+
+        &:nth-child(4) {
+            margin-top: 40px;
+        }
+
+        &:nth-child(5) {
+            margin-top: 43px;
+        }
+
+        &:nth-child(6) {
+            margin-top: 31px;
+        }
     }
 }
 
@@ -41,24 +86,51 @@
 
 .point__item-image {
     border-radius: 2px;
+
+    @include mq("md") {
+        img {
+            max-width: 310px;
+            max-height: 284px;
+            aspect-ratio: 155 / 142;
+        }
+    }
 }
 
 .point__item-content {
     margin-top: 24px;
+
+    @include mq("md") {
+        margin-top: 5px;
+        max-width: 65%;
+    }
 }
 
 .point__item-title {
     font-size: rclamp(20, 24, 390, 1440);
     font-weight: $bold;
     color: #2273AE;
+
+    @include mq("md") {
+        letter-spacing: 0.72px;
+        margin-top: 8px;
+    }
 }
 
 .point__item-text {
-    margin-top: rclamp(16, 24, 390, 1440);
+    margin-top: rclamp(16, 18, 390, 1440);
     line-height: 170%;
-    letter-spacing: 0.48px;
+    letter-spacing: rclamp(0.48, 0.54, 390, 1440);
+
+    @include mq("md") {
+        margin-top: 24px;
+    }
 }
 
 .point__item-text--note {
     color: $c-gray;
+
+    @include mq("md") {
+        font-size: 18px;
+        letter-spacing: 0.54px;
+    }
 }

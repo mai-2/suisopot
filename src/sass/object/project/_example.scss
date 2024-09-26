@@ -6,7 +6,8 @@
 
 .example__inner {
     padding-top: rclamp(56, 80, 390, 1440);
-    padding-bottom: rclamp(40, 48, 390, 1440);
+    padding-bottom: rclamp(40, 80, 390, 1440);
+    max-width: 1280px;
 }
 
 .example__content {
@@ -14,6 +15,10 @@
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 24px;
     padding: 40px 15px;
+
+    @include mq("md") {
+        padding: 40px 75px 48px 75px;
+    }
 }
 
 .example__title {
@@ -24,6 +29,12 @@
     margin-top: rclamp(25, 40, 390, 1440);
     font-size: rclamp(15, 18, 390, 1440);
     line-height: 150%;
+
+    @include mq("xl") {
+        line-height: 170%;
+        letter-spacing: 0.54px;
+        text-align: center;
+    }
 }
 
 .example__swiper {
@@ -33,6 +44,10 @@
 
 .example__slide {
     padding-inline: 45px;
+
+    @include mq("md") {
+        padding-inline: 16px;
+    }
 }
 
 .example__text {

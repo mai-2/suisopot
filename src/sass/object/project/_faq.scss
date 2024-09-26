@@ -11,6 +11,8 @@
 
 .faq__items {
     margin-top: rclamp(40, 80, 390, 1440);
+    margin-inline: auto;
+    max-width: 768px;
 }
 
 .faq__item {

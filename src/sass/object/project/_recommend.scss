@@ -1,19 +1,28 @@
 @use "global" as *;
 
 .recommend__inner {
-    margin-top: rclamp(40, 80, 390, 1440);
+    margin-top: rclamp(40, 77, 390, 1440);
     margin-bottom: rclamp(40, 68, 390, 1440);
 }
 
 .recommend__items {
     margin-top: rclamp(33, 80, 390, 1440);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 55.2px 0;
+
+    @include mq("md") {
+        gap: 33px 0;
+    }
 }
 
 .recommend__item {
     position: relative;
+    flex: 0 1 395px;
 
-    &+& {
-        margin-top: 56px;
+    @include mq("md") {
+        flex: 0 0 296px;
     }
 }
 

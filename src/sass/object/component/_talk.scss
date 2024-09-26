@@ -23,7 +23,7 @@
 
 .talk__icon {
     width: rclamp(50, 90, 390, 1440);
-    flex: 0 0 50px;
+    flex: 0 0 rclamp(50, 90, 390, 1440);
 }
 
 .talk__icon--hidden {

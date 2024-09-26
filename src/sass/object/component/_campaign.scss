@@ -9,3 +9,12 @@
     background-size: cover;
     background-repeat: repeat;
 }
+
+.campaign__image {
+    display: block;
+    margin: 0 auto;
+
+    @include mq("md") {
+        max-width: 59.444vw;
+    }
+}

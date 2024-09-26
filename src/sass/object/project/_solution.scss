@@ -8,6 +8,12 @@
 
 .solution__inner {
     padding-block: 40px;
+    max-width: 1022px;
+
+    @include mq("md") {
+        padding-top: 90px;
+        padding-bottom: 82px;
+    }
 }
 
 .solution__title-image {
@@ -20,16 +26,35 @@
     letter-spacing: 0.48px;
     margin-top: 12px;
     text-align: center;
+
+    @include mq("xl") {
+        font-size: 24px;
+        letter-spacing: 0.72px;
+        line-height: 130%;
+        margin-top: -5px;
+    }
 }
 
 .solution__items {
     margin-top: rclamp(30, 80, 390, 1440);
     display: flex;
-    gap: rclamp(3, 57, 390, 1440);
+    justify-content: center;
+    gap: rclamp(3, 60, 390, 1440);
+}
+
+.solution__item {
+    max-width: rclamp(118, 236, 390, 1440);
 }
 
 .solution__content {
     margin-top: rclamp(56, 80, 390, 1440);
+
+    @include mq("xl") {
+        background: $c-white;
+        padding: 40px 37px;
+        border-radius: 40px;
+        box-shadow: 0px 4px 4px 0px rgba(180, 221, 232, 0.25);
+    }
 }
 
 .solution__content-title {

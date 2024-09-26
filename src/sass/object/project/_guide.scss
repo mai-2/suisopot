@@ -14,14 +14,16 @@
     max-width: 201px;
 }
 
+.guide__items {
+    margin-top: rclamp(40, 80, 390,1440);
+    margin-inline: auto;
+    max-width: 800px;
+}
+
 .guide__item {
     &+& {
         margin-top: 40px;
     }
-}
-
-.guide__items {
-    margin-top: rclamp(40, 80, 390,1440);
 }
 
 .guide__item-title {

@@ -11,6 +11,7 @@
 
 .compare__scrollable {
     padding-top: rclamp(37, 88, 390, 1440);
+    width: 101%;
 }
 
 .compare__table {
@@ -57,6 +58,11 @@
     width: 159px;
     height: 48px;
     display: grid;
+
+    @include mq("md") {
+        width: 199px;
+        height: 60px;
+    }
 }
 
 .compare__table-cell--header {
@@ -86,6 +92,10 @@
                 left: -5px;
                 background-color: $c-accent;
                 border-radius: 8px 8px 0 0;
+
+                @include mq("md") {
+                    width: 199.8px;
+                }
             }
 
             &::after {

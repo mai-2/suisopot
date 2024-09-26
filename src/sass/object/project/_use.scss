@@ -8,3 +8,24 @@
 .use__title {
     max-width: 312px;
 }
+
+@include mq("md") {
+    .use__items {
+        margin-top: 118px;
+    }
+    
+    .use__lead-1 {
+        left: 10px;
+        top: -47px;
+    }
+
+    .use__lead-2 {
+        left: 83px;
+        top: -41px;
+    }
+
+    .use__lead-3 {
+        left: 51px;
+        top: -44px;
+    }
+}

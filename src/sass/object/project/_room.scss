@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.room {
+    padding-bottom: rclamp(41, 83, 390, 1440);
+}
+
 .room__heading {
     margin-top: 90px;
 }
@@ -13,6 +17,11 @@
     text-align: center;
     font-size: rclamp(14, 18, 390, 1440);
     line-height: 120%;
+
+    @include mq("md") {
+        line-height: 170%;
+        letter-spacing: 0.54px;
+    }
 }
 
 .room__swiper {
@@ -20,5 +29,16 @@
 }
 
 .room__slide {
-    // width: 300px;
+    @include mq("md") {
+        transform: scale(0.66) !important;
+        transition: transform 0.5s;
+
+        img {
+            height: auto;
+        }
+    }
+}
+
+.swiper-slide-active {
+    transform: scale(1) !important;
 }

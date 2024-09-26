@@ -2,13 +2,13 @@ jQuery("#js-drawer-icon").on("click", function(e) {
   e.preventDefault();
   jQuery("#js-drawer-icon").toggleClass("is-checked");
   jQuery("#js-drawer-content").toggleClass("is-checked");
-  jQuery("#js-body").toggleClass("is-checked");
+  jQuery("body").toggleClass("is-checked");
 });
 
 jQuery('#js-drawer-content a[href^="#"]').on("click", function(e) {
   jQuery("#js-drawer-icon").removeClass("is-checked");
   jQuery("#js-drawer-content").removeClass("is-checked");
-  jQuery("#js-body").removeClass("is-checked");
+  jQuery("body").removeClass("is-checked");
 });
 
 $('a[href^="#"]').on('click', function () {
@@ -42,11 +42,21 @@ const swiper1 = new Swiper('#js-room-swiper', {
   centeredSlides: true,
   slidesPerView: 1.25,
   spaceBetween: 24,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    }
+  }
 });
 
 const swiper2 = new Swiper('#js-example-swiper', {
   // Optional parameters
   loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+    }
+  },
 
   // If we need pagination
   pagination: {
@@ -63,6 +73,11 @@ const swiper2 = new Swiper('#js-example-swiper', {
 const swiper3 = new Swiper('#js-voice-swiper', {
   // Optional parameters
   loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    }
+  },
 
   // If we need pagination
   pagination: {

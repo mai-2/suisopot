@@ -1,16 +1,28 @@
 @use "global" as *;
 
 .steps {
-    margin-top: rclamp(40, 80, 390, 1440);
+    margin-top: 49px;
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+
+    @include mq("md") {
+        flex-direction: row;
+        justify-content: center;
+        gap: 31px;
+    }
 }
 
 .step {
     display: flex;
     gap: 24px;
     align-items: center;
+    position: relative;
 
-    &+& {
-        margin-top: 40px;
+    @include mq("md") {
+        flex-direction: column;
+        text-align: center;
+        max-width: 234px;
     }
 }
 
@@ -22,6 +34,15 @@
     font-family: $font-family-comment;
     font-size: rclamp(15, 23, 390, 1440);
     letter-spacing: -1.35px;
+
+    @include mq("md") {
+        position: absolute;
+        letter-spacing: -2.07px;
+        white-space: nowrap;
+        transform: rotate(-5deg);
+        top: 0;
+        left: 0;
+    }
 }
 
 .step__title {

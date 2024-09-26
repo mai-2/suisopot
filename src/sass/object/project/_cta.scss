@@ -39,7 +39,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 48px;
+
+    @include mq("md") {
+        flex-direction: row;
+    }
 }
 
 .cta__button-text {
@@ -64,6 +69,11 @@
     &::after {
         transform: rotate(20deg);
     }
+
+    @include mq("md") {
+        font-size: 24px;
+        letter-spacing: 0.72px;
+    }
 }
 
 .cta__button {
@@ -82,11 +92,28 @@
     transform: translateX(10px);
 }
 
-.cta__image {
+.cta__image-sp {
     position: absolute;
     width: 77px;
     height: 136px;
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
+
+    @include mq("xl") {
+        display: none;
+    }
+}
+
+.cta__image-pc {
+    display: none;
+    position: absolute;
+    width: 165.763px;
+    height: 291px;
+    top: 151px;
+    right: -145.658px;
+
+    @include mq("xl") {
+        display: block;
+    }
 }
