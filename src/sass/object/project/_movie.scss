@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .movie__inner {
-    padding-block: 40px;
+    padding-top: 55px;
+    padding-bottom: 47px;
     max-width: 1120px;
 
     @include mq("md") {
@@ -14,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
+    gap: 14px;
 
     @include mq("md") {
         flex-direction: row;
@@ -24,4 +25,8 @@
 
 .movie__item {
     max-width: 471px;
+
+    img {
+        border-radius: 16px;
+    }
 }

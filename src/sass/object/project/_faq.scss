@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .faq__inner {
-    padding-top: rclamp(56, 80, 390, 1440);
-    padding-bottom: rclamp(54, 80, 390, 1440);
+    padding-top: rclamp(78, 80, 390, 1440);
+    padding-bottom: rclamp(56, 80, 390, 1440);
 }
 
 .faq__title {
@@ -10,17 +10,17 @@
 }
 
 .faq__items {
-    margin-top: rclamp(40, 80, 390, 1440);
+    margin-top: rclamp(48, 80, 390, 1440);
     margin-inline: auto;
     max-width: 768px;
 }
 
 .faq__item {
     border-bottom: 1px solid $c-border;
-    padding-bottom: rclamp(15, 21, 390, 1440);
+    padding-bottom: rclamp(17, 21, 390, 1440);
 
     &+& {
-        margin-top: rclamp(20, 24, 390, 1440);
+        margin-top: rclamp(19, 24, 390, 1440);
     }
 }
 

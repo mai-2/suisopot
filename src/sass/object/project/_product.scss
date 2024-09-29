@@ -5,7 +5,7 @@
 }
 
 .product__inner {
-    padding-top: rclamp(56, 80, 390, 1440);
+    padding-top: rclamp(70, 80, 390, 1440);
     padding-bottom: rclamp(40, 80, 390, 1440);
 }
 
@@ -14,12 +14,12 @@
 }
 
 .product__content {
-    margin-top: rclamp(40, 80, 390, 1440);
+    margin-top: rclamp(55, 80, 390, 1440);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 43px;
 
     @include mq("md") {
         flex-direction: row;
@@ -38,12 +38,16 @@
     }
 }
 
+.product__items {
+    max-width: 343px;
+}
+
 .product__item {
     display: flex;
     align-items: flex-start;
 
     &+& {
-        margin-top: rclamp(12, 19, 390, 1440);
+        margin-top: rclamp(15.5, 19, 390, 1440);
     }
 
     &:first-child {

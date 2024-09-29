@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .compare__inner {
-    padding-top: rclamp(40, 120, 390, 1440);
+    padding-top: rclamp(54, 120, 390, 1440);
     padding-bottom: rclamp(40, 80, 390, 1440);
 }
 
@@ -10,7 +10,7 @@
 }
 
 .compare__scrollable {
-    padding-top: rclamp(37, 88, 390, 1440);
+    padding-top: rclamp(40, 88, 390, 1440);
     width: 101%;
 }
 
@@ -87,7 +87,7 @@
                 content: '';
                 display: block;
                 width: 160px;
-                height: 12px;
+                height: 14px;
                 top: -11px;
                 left: -5px;
                 background-color: $c-accent;
@@ -101,7 +101,7 @@
             &::after {
                 position: absolute;
                 content: 'とてもお得！';
-                top: -25px;
+                top: -20px;
                 left: -48px;
                 font-size: 20px;
                 font-weight: $normal;

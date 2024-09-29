@@ -5,12 +5,12 @@
 }
 
 .footer__items {
-    margin-top: rclamp(56, 68, 390, 1440);
+    margin-top: rclamp(54, 68, 390, 1440);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 27px;
 
     @include mq("lg") {
         flex-direction: row;
@@ -47,7 +47,7 @@
 }
 
 .footer__logo {
-    margin-top: rclamp(40, 48, 390, 1440);
+    margin-top: rclamp(44, 48, 390, 1440);
     width: rclamp(95, 141, 390, 1440);
     height: rclamp(95, 141, 390, 1440);
 }
@@ -60,7 +60,7 @@
 }
 
 .footer__bottom {
-    margin-top: 40px;
+    margin-top: 57px;
     background-color: $c-base;
     text-align: center;
     padding-bottom: rclamp(7, 30, 390, 1440);

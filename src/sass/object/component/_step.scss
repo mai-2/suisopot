@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .steps {
-    margin-top: 49px;
+    margin-top: 55px;
     display: flex;
     flex-direction: column;
     gap: 41px;
@@ -46,11 +46,11 @@
 }
 
 .step__title {
-    margin-top: 3px;
+    margin-top: 13px;
     font-size: rclamp(20, 24, 390, 1440);
 }
 
 .step__text {
-    margin-top: 8px;
+    margin-top: 15px;
     line-height: 150%;
 }

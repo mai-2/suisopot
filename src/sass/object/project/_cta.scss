@@ -16,7 +16,7 @@
 }
 
 .cta__inner {
-    padding-top: 53.5px;
+    padding-top: 63px;
     padding-bottom: 120px;
 }
 
@@ -26,7 +26,7 @@
 
 .cta__title {
     font-family: $base-font-family;
-    line-height: 85%;
+    line-height: 67%;
     letter-spacing: -0.72px;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .cta__button-boxes {
-    margin-top: 64.5px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +49,7 @@
 
 .cta__button-text {
     font-weight: $bold;
+    line-height: normal;
     display: flex;
     justify-content: center;
     gap: 8px;

@@ -1,16 +1,17 @@
 @use "global" as *;
 
 .point__inner {
-    padding-top: rclamp(56, 78, 390, 1440);
-    padding-bottom: rclamp(40, 78, 390, 1440);
+    padding-top: rclamp(57, 78, 390, 1440);
+    padding-bottom: rclamp(53, 78, 390, 1440);
 }
 
 .point__title {
+    line-height: normal;
     text-align: center;
 }
 
 .point__items {
-    margin-top: rclamp(24, 40, 390, 1440);
+    margin-top: rclamp(30, 40, 390, 1440);
     position: relative;
 
     @include mq("xl") {
@@ -31,7 +32,13 @@
 
 .point__item {
     &+& {
-        margin-top: 40px;
+        margin-top: 46px;
+    }
+
+    &:nth-child(6) {
+        .point__item-text {
+            letter-spacing: 0.7px;
+        }
     }
 
     @include mq("md") {
@@ -86,6 +93,7 @@
 
 .point__item-image {
     border-radius: 2px;
+    margin-top: 4px;
 
     @include mq("md") {
         img {
@@ -108,6 +116,7 @@
 .point__item-title {
     font-size: rclamp(20, 24, 390, 1440);
     font-weight: $bold;
+    line-height: normal;
     color: #2273AE;
 
     @include mq("md") {
@@ -120,6 +129,7 @@
     margin-top: rclamp(16, 18, 390, 1440);
     line-height: 170%;
     letter-spacing: rclamp(0.48, 0.54, 390, 1440);
+    text-align: justify;
 
     @include mq("md") {
         margin-top: 24px;

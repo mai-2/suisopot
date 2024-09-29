@@ -12,19 +12,23 @@
 .result__content {
     background: $c-white;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-    padding: 40px 11.5px;
+    border-radius: 40px;
+    padding: 39px 11.5px 42px;
 }
 
 .result__heading {
     text-align: center;
 }
 
+.result__title {
+    line-height: 1.45;
+}
+
 .result__lead {
     font-family: $second-font-family;
     font-size: rclamp(15, 30, 390, 1440);
     color: $c-gray;
-    margin-top: 1px;
+    margin-top: 4px;
 
     @include mq("md") {
         line-height: 170%;
@@ -32,11 +36,20 @@
 }
 
 .result__talk {
-    margin-top: 24.5px;
+    margin-top: 28px;
     margin-inline: auto;
     max-width: 815px;
 
     @include mq("md") {
         margin-top: 56px;
+    }
+
+    .talk + .talk {
+        margin-top: 15px;
+    }
+
+    .talk__text {
+        line-height: 174%;
+        letter-spacing: -0.6px;
     }
 }

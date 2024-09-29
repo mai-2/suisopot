@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .use__inner {
-    padding-top: rclamp(56, 80, 390, 1440);
-    padding-bottom: rclamp(40, 80, 390, 1440);
+    padding-top: rclamp(70, 80, 390, 1440);
+    padding-bottom: rclamp(53, 80, 390, 1440);
 }
 
 .use__title {
@@ -13,7 +13,7 @@
     .use__items {
         margin-top: 118px;
     }
-    
+
     .use__lead-1 {
         left: 10px;
         top: -47px;

@@ -1,28 +1,28 @@
 @use "global" as *;
 
 .info__inner {
-    padding-top: rclamp(65, 80, 390, 1440);
+    padding-top: rclamp(84, 80, 390, 1440);
     padding-bottom: rclamp(40, 80, 390, 1440);
 }
 
 .info__items {
-    margin-top: 49px;
+    margin-top: 57px;
     margin-inline: auto;
     max-width: 768px;
 }
 
 .info__item {
     border-bottom: 1px solid $c-border;
-    padding-bottom: rclamp(6, 22, 390, 1440);
+    padding-bottom: rclamp(5, 22, 390, 1440);
 
     &+& {
-        margin-top: 24px;
+        margin-top: 27px;
     }
 }
 
 .info__item-meta {
     display: inline-flex;
-    gap: 24px;
+    gap: 25px;
 }
 
 .info__item-date {
@@ -36,15 +36,16 @@
     text-transform: uppercase;
     border: 1px solid $c-gray;
     border-radius: 2px;
-    padding: 2px 8px;
+    padding: 2px 7px;
 }
 
 .info__item-title {
-    margin-top: 3px;
+    margin-top: 2px;
     font-size: 16px;
     font-weight: $normal;
     line-height: normal;
     letter-spacing: 0.64px;
+    text-align: justify;
 }
 
 .info__button {

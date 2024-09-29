@@ -6,8 +6,8 @@
 }
 
 .guide__inner {
-    padding-top: rclamp(40, 80, 390, 1440);
-    padding-bottom: rclamp(24, 80, 390, 1440);
+    padding-top: rclamp(50, 80, 390, 1440);
+    padding-bottom: rclamp(27, 80, 390, 1440);
 }
 
 .guide__title {
@@ -15,14 +15,14 @@
 }
 
 .guide__items {
-    margin-top: rclamp(40, 80, 390,1440);
+    margin-top: rclamp(52, 80, 390,1440);
     margin-inline: auto;
     max-width: 800px;
 }
 
 .guide__item {
     &+& {
-        margin-top: 40px;
+        margin-top: 44px;
     }
 }
 
@@ -45,8 +45,8 @@
 .guide__item-text {
     font-size: 15px;
     line-height: 160%;
-    letter-spacing: 0.45px;
-    margin-top: 8px;
+    letter-spacing: 0.6px;
+    margin-top: 13px;
 
     &+& {
         margin-top: 30px;
@@ -56,8 +56,8 @@
 .guide__item-lists {
     border-top: 1px dashed $c-gray;
     border-bottom: 1px dashed $c-gray;
-    padding-block: 16px;
-    margin-top: rclamp(4, 9, 390, 1440);
+    padding-block: 20px;
+    margin-top: rclamp(3, 9, 390, 1440);
     width: 215px;
 }
 
@@ -66,7 +66,7 @@
     letter-spacing: 0.45px;
 
     &+& {
-        margin-top: 5px;
+        margin-top: 11px;
     }
 }
 
@@ -74,8 +74,8 @@
     font-size: 16px;
     font-weight: $bold;
     letter-spacing: 0.48px;
-    line-height: 170%;
-    margin-top: 40px;
+    line-height: 163%;
+    margin-top: 37px;
 }
 
 .guide__item-text--attention {
@@ -83,4 +83,5 @@
     color: $c-gray;
     margin-top: 12px;
     line-height: normal;
+    text-align: justify;
 }

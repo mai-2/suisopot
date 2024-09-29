@@ -5,7 +5,7 @@
     gap: rclamp(19, 24, 390, 1440);
 
     &+& {
-        margin-top: 16px;
+        margin-top: 18px;
     }
 }
 
@@ -53,6 +53,7 @@
     font-size: rclamp(15, 20, 390, 1440);
     line-height: 170%;
     letter-spacing: rclamp(-0.15, 0.6, 390, 1440);
+    text-align: justify;
 }
 
 .talk__text-strong {
