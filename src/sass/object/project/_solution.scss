@@ -13,17 +13,26 @@
 
     @include mq("md") {
         padding-top: 90px;
-        padding-bottom: 82px;
+        padding-bottom: 80px;
+        padding-inline: 15px;
     }
 }
 
 .solution__title {
     line-height: normal;
+
+    @include mq("xl") {
+        gap: 8px;
+    }
 }
 
 .solution__title-image {
     width: rclamp(151, 187, 390, 1440);
     padding-right: 5px;
+
+    @include mq("xl") {
+        padding-right: 0;
+    }
 }
 
 .solution__lead {
@@ -55,7 +64,7 @@
 
     @include mq("xl") {
         background: $c-white;
-        padding: 40px 37px;
+        padding: 45px 37px;
         border-radius: 40px;
         box-shadow: 0px 4px 4px 0px rgba(180, 221, 232, 0.25);
     }
@@ -67,10 +76,14 @@
     line-height: normal;
     font-size: rclamp(24, 32, 390, 1440);
     text-align: center;
+
+    @include mq("xl") {
+        letter-spacing: 0.96px;
+    }
 }
 
 .solution__content-talks {
-    margin-top: rclamp(42, 44, 390, 1440);
+    margin-top: rclamp(42, 47, 390, 1440);
 
     .talk--reverse {
         margin-left: 20px;
@@ -79,17 +92,40 @@
 
 .solution__content-talk1 {
     gap: 13px;
+
+    @include mq("xl") {
+        gap: 24px;
+    }
+}
+
+.solution__content-talk3 {
+    @include mq("md") {
+        align-items: center;
+    }
 }
 
 .solution__content-image {
     margin-top: 14px !important;
+    justify-content: center;
 }
 
 .solution__content-talk5 {
     gap: 8px;
+
+    @include mq("md") {
+        align-items: center;
+        gap: 24px;
+        margin-top: 0 !important;
+    }
 }
 
 .solution__content-talk6 {
     gap: 8px;
     padding-right: 15px;
+    max-width: 864px;
+
+    @include mq("md") {
+        margin-top: 0 !important;
+        gap: 24px;
+    }
 }

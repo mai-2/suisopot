@@ -1,32 +1,62 @@
 @use "global" as *;
 
 .info__inner {
-    padding-top: rclamp(84, 80, 390, 1440);
-    padding-bottom: rclamp(40, 80, 390, 1440);
+    padding-top: rclamp(84, 122, 390, 1440);
+    padding-bottom: rclamp(40, 81, 390, 1440);
+}
+
+.info__title {
+    max-width: 690px;
 }
 
 .info__items {
     margin-top: 57px;
     margin-inline: auto;
     max-width: 768px;
+
+    @include mq("md") {
+        margin-top: 57px;
+    }
 }
 
 .info__item {
-    border-bottom: 1px solid $c-border;
-    padding-bottom: rclamp(5, 22, 390, 1440);
-
     &+& {
         margin-top: 27px;
+
+        @include mq("md") {
+            margin-top: 34px;
+        }
+    }
+}
+
+.info__item-link {
+    border-bottom: 1px solid $c-border;
+    padding-bottom: rclamp(6, 22, 390, 1440);
+    display: flex;
+    flex-direction: column;
+
+    @include mq("md") {
+        flex-direction: row;
     }
 }
 
 .info__item-meta {
     display: inline-flex;
     gap: 25px;
+    align-items: center;
+
+    @include mq("md") {
+        gap: 26px;
+        padding-right: 23px;
+    }
 }
 
 .info__item-date {
     font-family: $font-family-en;
+
+    @include mq("md") {
+        letter-spacing: 0.48px;
+    }
 }
 
 .info__item-category {
@@ -37,6 +67,10 @@
     border: 1px solid $c-gray;
     border-radius: 2px;
     padding: 2px 7px;
+
+    @include mq("md") {
+        padding: 5px 7px;
+    }
 }
 
 .info__item-title {
@@ -46,6 +80,11 @@
     line-height: normal;
     letter-spacing: 0.64px;
     text-align: justify;
+
+    @include mq("md") {
+        margin-top: 0;
+        letter-spacing: 0.48px;
+    }
 }
 
 .info__button {

@@ -1,16 +1,16 @@
 @use "global" as *;
 
 .faq__inner {
-    padding-top: rclamp(78, 80, 390, 1440);
-    padding-bottom: rclamp(56, 80, 390, 1440);
+    padding-top: rclamp(78, 126, 390, 1440);
+    padding-bottom: rclamp(56, 136, 390, 1440);
 }
 
 .faq__title {
-    max-width: 201px;
+    max-width: rclamp(201, 407, 390, 1440);
 }
 
 .faq__items {
-    margin-top: rclamp(48, 80, 390, 1440);
+    margin-top: rclamp(48, 88, 390, 1440);
     margin-inline: auto;
     max-width: 768px;
 }
@@ -20,7 +20,7 @@
     padding-bottom: rclamp(17, 21, 390, 1440);
 
     &+& {
-        margin-top: rclamp(19, 24, 390, 1440);
+        margin-top: rclamp(19, 25, 390, 1440);
     }
 }
 
@@ -52,6 +52,10 @@
     margin-left: 16px;
     margin-top: 2.4px;
     width: 100%;
+
+    @include mq("md") {
+        margin-left: 25px;
+    }
 }
 
 .faq__head-arrow {

@@ -6,19 +6,19 @@
 }
 
 .ready__inner {
-    padding-top: rclamp(57, 80, 390, 1440);
-    padding-bottom: rclamp(24, 80, 390, 1440);
+    padding-top: rclamp(57, 91, 390, 1440);
+    padding-bottom: rclamp(24, 70, 390, 1440);
 }
 
 .ready__title {
-    max-width: 262px;
+    max-width: rclamp(262, 500, 390, 1440);
 }
 
 .ready__items {
     @include mq("md") {
         max-width: 501px;
-        gap: 90px 31px;
-        margin: 80px auto 0 auto;
+        gap: 90px 59px;
+        margin: 87px auto 0 auto;
         flex-wrap: wrap;
     }
 
@@ -34,22 +34,26 @@
 
 @include mq("md") {
     .ready__lead-1 {
-        left: 64px;
-        top: -44px;
+        left: 42px;
+        top: -38px;
     }
 
     .ready__lead-2 {
-        left: 54px;
-        top: -45px;
+        left: 37px;
+        top: -39px;
     }
 
     .ready__lead-3 {
-        left: 64.5px;
-        top: -44px;
+        left: 51px;
+        top: -38px;
     }
 
     .ready__lead-4 {
-        left: -9.5px;
-        top: -50px;
+        left: -21px;
+        top: -45px;
+    }
+
+    .ready__content-title2 {
+        width: 107%;
     }
 }

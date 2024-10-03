@@ -13,8 +13,8 @@
     @include mq("md") {
         height: 104px;
         padding-block: 16px;
-        padding-left: 45px;
-        padding-right: 34px;
+        padding-left: 48px;
+        padding-right: 36px;
     }
 }
 
@@ -39,7 +39,7 @@
     width: rclamp(151, 187, 390, 1440);
 
     @include mq("md") {
-        padding-right: 30px;
+        padding-right: 2px;
     }
 }
 
@@ -56,6 +56,7 @@
     @include mq("xl") {
         grid-column: 2 / 3;
         grid-row: 1;
+        padding-left: 17px;
     }
 }
 

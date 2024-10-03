@@ -5,17 +5,21 @@
 }
 
 .voice__inner {
-    padding-top: rclamp(45, 80, 390, 1440);
-    padding-bottom: rclamp(70, 168, 390, 1440);
+    padding-top: rclamp(45, 91, 390, 1440);
+    padding-bottom: rclamp(70, 135, 390, 1440);
 }
 
 .voice__title {
-    max-width: 177px;
+    max-width: rclamp(177, 347, 390, 1440);
+}
+
+.voice__container {
+    margin-top: rclamp(50, 86, 390, 1440);
+    position: relative;
 }
 
 .voice__swiper {
-    margin-top: rclamp(50, 80, 390, 1440);
-    max-width: 1130px;
+    max-width: 1010px;
 }
 
 .voice__slide {
@@ -31,11 +35,19 @@
     box-shadow: 0px 4px 4px 0px rgba(199, 218, 255, 0.25);
     overflow: hidden;
     width: 235px;
+
+    @include mq("md") {
+        width: 320px;
+    }
 }
 
 .voice__image {
     img {
         height: 170px;
+
+        @include mq("md") {
+            height: 225px;
+        }
     }
 }
 
@@ -43,11 +55,20 @@
     background: $c-white;
     overflow: hidden;
     padding: 12px 14px 9px 9px;
+
+    @include mq("md") {
+        padding: 18px 16px 16px 16px;
+    }
 }
 
 .voice__lead {
     font-size: rclamp(15, 18, 390, 1440);
     line-height: normal;
+
+    @include mq("md") {
+        line-height: 170%;
+        letter-spacing: 0.54px;
+    }
 }
 
 .voice__text {
@@ -57,7 +78,7 @@
 }
 
 .voice__footer {
-    margin-top: rclamp(27, 32, 390, 1440);
+    margin-top: rclamp(27, 38, 390, 1440);
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -65,6 +86,11 @@
 
 .voice__info {
     font-size: 11.755px;
+
+    @include mq("md") {
+        font-size: 16px;
+        letter-spacing: 0.48px;
+    }
 }
 
 .voice__icon {
@@ -82,17 +108,35 @@
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: auto;
+
+    @include mq("xl") {
+        bottom: -58px;
+    }
 }
 
 .voice__prev,
 .voice__next {
     top: 46%;
+
+    @include mq("md") {
+        width: 29px;
+        height: 29px;
+        top: 48%;
+    }
 }
 
 .voice__prev {
     left: 25px;
+
+    @include mq("xl") {
+        left: 155px;
+    }
 }
 
 .voice__next {
     right: 25px;
+
+    @include mq("xl") {
+        right: 155px;
+    }
 }

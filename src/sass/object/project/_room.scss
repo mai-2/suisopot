@@ -1,15 +1,19 @@
 @use "global" as *;
 
 .room {
-    padding-bottom: rclamp(41, 83, 390, 1440);
+    padding-bottom: rclamp(41, 78, 390, 1440);
 }
 
 .room__heading {
     margin-top: 95px;
+
+    @include mq("md") {
+        margin-top: 90px;
+    }
 }
 
 .room__title {
-    max-width: 345px;
+    max-width: rclamp(345, 638, 390, 1440);
 }
 
 .room__text {
@@ -21,6 +25,7 @@
     @include mq("md") {
         line-height: 170%;
         letter-spacing: 0.54px;
+        margin-top: 48px;
     }
 }
 

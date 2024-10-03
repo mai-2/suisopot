@@ -1,31 +1,31 @@
 @use "global" as *;
 
 .use__inner {
-    padding-top: rclamp(70, 80, 390, 1440);
-    padding-bottom: rclamp(53, 80, 390, 1440);
+    padding-top: rclamp(70, 91, 390, 1440);
+    padding-bottom: rclamp(53, 108, 390, 1440);
 }
 
 .use__title {
-    max-width: 312px;
+    max-width: rclamp(312, 582, 390, 1440);
 }
 
 @include mq("md") {
     .use__items {
-        margin-top: 118px;
+        margin-top: 128px;
     }
 
     .use__lead-1 {
         left: 10px;
-        top: -47px;
+        top: -42px;
     }
 
     .use__lead-2 {
         left: 83px;
-        top: -41px;
+        top: -36px;
     }
 
     .use__lead-3 {
         left: 51px;
-        top: -44px;
+        top: -38px;
     }
 }

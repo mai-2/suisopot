@@ -2,16 +2,20 @@
 
 .point__inner {
     padding-top: rclamp(57, 78, 390, 1440);
-    padding-bottom: rclamp(53, 78, 390, 1440);
+    padding-bottom: rclamp(53, 92, 390, 1440);
 }
 
 .point__title {
     line-height: normal;
     text-align: center;
+
+    @include mq("xl") {
+        margin-left: 18px;
+    }
 }
 
 .point__items {
-    margin-top: rclamp(30, 40, 390, 1440);
+    margin-top: rclamp(30, 36, 390, 1440);
     position: relative;
 
     @include mq("xl") {
@@ -45,28 +49,50 @@
         display: inline-flex;
         gap: 32px;
 
+        &+& {
+            margin-top: 32px;
+        }
+
         &:nth-child(2n) {
             flex-direction: row-reverse;
         }
 
         &:nth-child(2) {
-            margin-top: 28px;
+            margin-top: 24px;
+            gap: 36px;
+
+            .point__item-content {
+                margin-top: 30px;
+            }
         }
 
         &:nth-child(3) {
-            margin-top: 32px;
+            .point__item-content {
+                max-width: 63%;
+            }
         }
 
         &:nth-child(4) {
             margin-top: 40px;
+
+            .point__item-content {
+                margin-top: -5px;
+            }
         }
 
         &:nth-child(5) {
-            margin-top: 43px;
+            .point__item-content {
+                margin-top: 30px;
+            }
         }
 
         &:nth-child(6) {
-            margin-top: 31px;
+            margin-top: 27px;
+
+            .point__item-content {
+                margin-top: 28px;
+                max-width: 66%;
+            }
         }
     }
 }
@@ -108,8 +134,8 @@
     margin-top: 24px;
 
     @include mq("md") {
-        margin-top: 5px;
-        max-width: 65%;
+        margin-top: 14px;
+        max-width: 65.5241%;
     }
 }
 
@@ -121,18 +147,18 @@
 
     @include mq("md") {
         letter-spacing: 0.72px;
-        margin-top: 8px;
+        margin-top: 18px;
     }
 }
 
 .point__item-text {
-    margin-top: rclamp(16, 18, 390, 1440);
+    margin-top: rclamp(16, 27, 390, 1440);
     line-height: 170%;
-    letter-spacing: rclamp(0.48, 0.54, 390, 1440);
+    letter-spacing: rclamp(0.48, 0.5, 390, 1440);
     text-align: justify;
 
     @include mq("md") {
-        margin-top: 24px;
+        font-size: 18px;
     }
 }
 

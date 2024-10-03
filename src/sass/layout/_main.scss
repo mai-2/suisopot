@@ -29,10 +29,10 @@ body {
 .section-title {
     font-family: $second-font-family;
     font-weight: $normal;
-    font-size: 24px;
+    font-size: rclamp(24, 40, 390, 1440);
 
-    @include mq("xl") {
-        font-size: 40px;
+    @include mq("lg") {
+        letter-spacing: 1.2px;
     }
 }
 
@@ -67,9 +67,8 @@ body {
         background-image: url(../images/heading-left.png);
         left: -7px;
 
-        @include mq("md") {
-            left: -26px;
-            margin-right: 16px;
+        @include mq("xl") {
+            left: 24px;
         }
     }
 
@@ -77,9 +76,8 @@ body {
         background-image: url(../images/heading-right.png);
         right: -7px;
 
-        @include mq("md") {
-            right: -26px;
-            margin-left: 16px;
+        @include mq("xl") {
+            right: 24px;
         }
     }
 

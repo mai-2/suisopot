@@ -22,12 +22,16 @@
     @include mq("md") {
         flex-direction: column;
         text-align: center;
-        max-width: 234px;
+        width: 234px;
     }
 }
 
 .step__image {
     max-width: 118px;
+
+    @include mq("md") {
+        max-width: 174px;
+    }
 }
 
 .step__lead {
@@ -48,9 +52,18 @@
 .step__title {
     margin-top: 13px;
     font-size: rclamp(20, 24, 390, 1440);
+
+    @include mq("md") {
+        margin-top: 8px;
+    }
 }
 
 .step__text {
     margin-top: 15px;
     line-height: 150%;
+
+    @include mq("md") {
+        margin-top: 17px;
+        line-height: 170%;
+    }
 }

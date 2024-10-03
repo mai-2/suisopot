@@ -6,16 +6,16 @@
 }
 
 .guide__inner {
-    padding-top: rclamp(50, 80, 390, 1440);
-    padding-bottom: rclamp(27, 80, 390, 1440);
+    padding-top: rclamp(50, 67, 390, 1440);
+    padding-bottom: rclamp(27, 85, 390, 1440);
 }
 
 .guide__title {
-    max-width: 201px;
+    max-width: rclamp(201, 395, 390, 1440);
 }
 
 .guide__items {
-    margin-top: rclamp(52, 80, 390,1440);
+    margin-top: rclamp(52, 96, 390,1440);
     margin-inline: auto;
     max-width: 800px;
 }
@@ -23,6 +23,10 @@
 .guide__item {
     &+& {
         margin-top: 44px;
+
+        @include mq("md") {
+            margin-top: 48px;
+        }
     }
 }
 
@@ -51,6 +55,13 @@
     &+& {
         margin-top: 30px;
     }
+
+    @include mq("md") {
+        margin-top: 15px;
+        line-height: 170%;
+        letter-spacing: 1.4px;
+        text-align: justify;
+    }
 }
 
 .guide__item-lists {
@@ -68,6 +79,10 @@
     &+& {
         margin-top: 11px;
     }
+
+    @include mq("md") {
+        letter-spacing: 1.4px;
+    }
 }
 
 .guide__item-text--info {
@@ -76,6 +91,11 @@
     letter-spacing: 0.48px;
     line-height: 163%;
     margin-top: 37px;
+
+    @include mq("md") {
+        line-height: 170%;
+        margin-top: 49px;
+    }
 }
 
 .guide__item-text--attention {
@@ -84,4 +104,10 @@
     margin-top: 12px;
     line-height: normal;
     text-align: justify;
+
+    @include mq("md") {
+        margin-top: 15px;
+        line-height: 170%;
+        letter-spacing: 0.39px;
+    }
 }

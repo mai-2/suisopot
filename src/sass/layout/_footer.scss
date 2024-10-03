@@ -5,7 +5,7 @@
 }
 
 .footer__items {
-    margin-top: rclamp(54, 68, 390, 1440);
+    margin-top: rclamp(54, 69, 390, 1440);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,10 +44,14 @@
     gap: 40px;
     max-width: 788px;
     margin-inline: auto;
+
+    @include mq("md") {
+        gap: 48px;
+    }
 }
 
 .footer__logo {
-    margin-top: rclamp(44, 48, 390, 1440);
+    margin-top: rclamp(44, 57, 390, 1440);
     width: rclamp(95, 141, 390, 1440);
     height: rclamp(95, 141, 390, 1440);
 }
@@ -64,6 +68,10 @@
     background-color: $c-base;
     text-align: center;
     padding-bottom: rclamp(7, 30, 390, 1440);
+
+    @include mq("md") {
+        margin-top: 72px;
+    }
 }
 
 .footer__copyright {

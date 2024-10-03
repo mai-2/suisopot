@@ -8,12 +8,12 @@
 }
 
 .problem__head {
-    padding-top: rclamp(43, 80, 390, 1440);
+    padding-top: rclamp(43, 89, 390, 1440);
     text-align: center;
 }
 
 .problem__body {
-    margin-top: rclamp(24, 25, 390, 1440);
+    margin-top: rclamp(24, 32, 390, 1440);
     display: flex;
     max-width: rclamp(420, 992, 390, 1440);
     width: 100%;
@@ -24,6 +24,7 @@
 
     @include mq("xl") {
         gap: 64px;
+        padding-right: 0;
     }
 }
 
@@ -65,7 +66,8 @@
     @include mq("xl") {
         padding: 24px;
         display: inline-flex;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: flex-end;
     }
 }
 
@@ -75,6 +77,12 @@
     line-height: 130%;
     letter-spacing: -0.7px;
     margin-left: rclamp(6.32, 16, 390, 1440);
+    max-width: 415px;
+    width: 100%;
+
+    @include mq("xl") {
+        letter-spacing: 0.72px;
+    }
 }
 
 .problem__item-image {
@@ -121,5 +129,6 @@
     @include mq("md") {
         letter-spacing: 0.96px;
         line-height: 170%;
+        font-feature-settings: normal;
     }
 }

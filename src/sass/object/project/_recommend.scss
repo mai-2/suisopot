@@ -1,12 +1,16 @@
 @use "global" as *;
 
 .recommend__inner {
-    margin-top: rclamp(55, 77, 390, 1440);
-    margin-bottom: rclamp(40, 68, 390, 1440);
+    padding-top: rclamp(55, 90, 390, 1440);
+    padding-bottom: rclamp(40, 72, 390, 1440);
+}
+
+.recommend__title {
+    max-width: 690px;
 }
 
 .recommend__items {
-    margin-top: rclamp(38, 80, 390, 1440);
+    margin-top: rclamp(38, 88, 390, 1440);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -23,6 +27,13 @@
 
     @include mq("md") {
         flex: 0 0 296px;
+
+        &:first-child {
+            .recommend__item-text {
+                width: 101%;
+                letter-spacing: 0.6px;
+            }
+        }
     }
 }
 
@@ -37,6 +48,11 @@
     place-content: center;
     top: 7px;
     left: 7px;
+
+    @include mq("md") {
+        top: -15px;
+        left: -12px;
+    }
 }
 
 .recommend__item-number {
@@ -59,6 +75,10 @@
     margin-top: 35px;
     font-size: rclamp(20, 24, 390, 1440);
     text-align: center;
+
+    @include mq("md") {
+        margin-top: 32px;
+    }
 }
 
 .recommend__item-text {
@@ -66,4 +86,9 @@
     line-height: 150%;
     letter-spacing: 0.48px;
     text-align: justify;
+
+    @include mq("md") {
+        margin-top: 12px;
+        line-height: 165%;
+    }
 }

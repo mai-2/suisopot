@@ -1,16 +1,16 @@
 @use "global" as *;
 
 .compare__inner {
-    padding-top: rclamp(54, 120, 390, 1440);
-    padding-bottom: rclamp(40, 80, 390, 1440);
+    padding-top: rclamp(54, 130, 390, 1440);
+    padding-bottom: rclamp(40, 92, 390, 1440);
 }
 
 .compare__title {
-    max-width: 249px;
+    max-width: rclamp(249, 477, 390, 1440);
 }
 
 .compare__scrollable {
-    padding-top: rclamp(40, 88, 390, 1440);
+    padding-top: rclamp(40, 93, 390, 1440);
     width: 101%;
 }
 
@@ -108,6 +108,12 @@
                 font-family: $font-family-comment;
                 letter-spacing: -1.8px;
                 transform: rotate(-5deg);
+
+                @include mq("md") {
+                    font-size: 25px;
+                    top: -27px;
+                    left: -60px;
+                }
             }
         }
 

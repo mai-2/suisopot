@@ -6,11 +6,19 @@
 
     &+& {
         margin-top: 18px;
+
+        @include mq("xl") {
+            margin-top: 16px;
+        }
     }
 }
 
 .talk--reverse {
     flex-direction: row-reverse;
+
+    @include mq("md") {
+        align-items: center;
+    }
 
     .talk__balloon {
         &::before {
@@ -59,4 +67,8 @@
 .talk__text-strong {
     font-weight: $bold;
     background-color: $c-green;
+}
+
+.talk__image {
+    max-width: 820px;
 }

@@ -18,6 +18,11 @@
 .cta__inner {
     padding-top: 63px;
     padding-bottom: 120px;
+
+    @include mq("xl") {
+        padding-top: 54px;
+        padding-bottom: 95px;
+    }
 }
 
 .cta__content {
@@ -26,8 +31,21 @@
 
 .cta__title {
     font-family: $base-font-family;
+    font-weight: $normal;
     line-height: 67%;
     letter-spacing: -0.72px;
+    font-size: clamp(1.125rem, -0.125rem + 6.67vw, 1.5rem);
+
+    @include mq("md") {
+        letter-spacing: 0.96px;
+        flex-wrap: nowrap;
+        max-width: 768px;
+    }
+
+    @include mq("xl") {
+        font-size: 32px;
+        max-width: 987px;
+    }
 }
 
 .cta__title--strong {
@@ -44,6 +62,7 @@
 
     @include mq("md") {
         flex-direction: row;
+        margin-top: 62px;
     }
 }
 
@@ -74,6 +93,7 @@
     @include mq("md") {
         font-size: 24px;
         letter-spacing: 0.72px;
+        align-items: center;
     }
 }
 
@@ -116,5 +136,6 @@
 
     @include mq("xl") {
         display: block;
+        top: 73px;
     }
 }
