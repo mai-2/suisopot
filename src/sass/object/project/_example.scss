@@ -18,6 +18,10 @@
     padding: 55px 30px 50px;
 
     @include mq("md") {
+        padding: 48px 119px 51px;
+    }
+
+    @include mq("lg") {
         padding: 48px 135px 51px;
     }
 }

@@ -29,6 +29,11 @@
 .footer__item-link {
     font-size: rclamp(13, 16, 390, 1440);
     color: $c-gray;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
 
     @include mq("lg") {
         border-left: 1px solid $c-gray;

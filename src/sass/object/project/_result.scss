@@ -27,7 +27,7 @@
 .result__title {
     line-height: 1.45;
 
-    @include mq("md") {
+    @include mq("lg") {
         letter-spacing: 1px;
     }
 }

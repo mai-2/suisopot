@@ -14,7 +14,6 @@
     &:hover {
         background-color: $c-white;
         color: $c-accent;
-        opacity: 1;
 
         svg path{
             fill: $c-accent;
@@ -45,8 +44,6 @@
     }
 
     &:hover {
-        opacity: 1;
-
         &::before {
             opacity: 0;
         }

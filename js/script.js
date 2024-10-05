@@ -53,7 +53,7 @@ const swiper2 = new Swiper('#js-example-swiper', {
   // Optional parameters
   loop: true,
   breakpoints: {
-    768: {
+    1024: {
       slidesPerView: 4,
     }
   },

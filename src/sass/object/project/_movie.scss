@@ -6,7 +6,7 @@
     max-width: 1120px;
 
     @include mq("md") {
-        padding-top: 71px;
+        padding-top: 65px;
         padding-bottom: 77px;
     }
 }
@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 14px;
+    gap: 17px;
 
     @include mq("md") {
         flex-direction: row;
@@ -25,41 +25,78 @@
 }
 
 .movie__item {
-    max-width: 471px;
     display: grid;
     border-radius: 16px;
     overflow: hidden;
-    grid-template-columns: 47.9% 1fr;
+    grid-template-columns: 50% 1fr;
     grid-template-rows: 1fr;
+    width: 360px;
+    height: 120px;
 
-    &:hover {
-        .movie__item-thumbnail {
-            &::before {
-                transform: translate(-50%, -50%) scale(1.25);
+    @include mq("md") {
+        width: 471px;
+        height: 160px;
+        grid-template-columns: 48% 1fr;
+
+        &:hover {
+            .movie__item-thumbnail {
+                &::before {
+                    transform: translate(-50%, -50%) scale(1.25);
+                }
             }
-        }
 
-        .movie__item-link {
-            background-color: $c-white;
+            .movie__item-link1,
+            .movie__item-link2 {
+                background-color: $c-white;
 
-            &::before {
-                opacity: 0;
+                &::before {
+                    opacity: 0;
+                }
             }
 
-            .movie__item-icon path {
-                stroke: url(#gradientMovieIcon1);
+            .movie__item-link1 {
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 41px;
+                    width: 17px;
+                    height: 30px;
+                    background-image: url(../images/icon-hover01.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
             }
-        }
 
-        .movie__item-text {
-            background: $c-gradation;
-            background-clip: text;
+            .movie__item-link2 {
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 41px;
+                    width: 36px;
+                    height: 29px;
+                    background-image: url(../images/icon-hover02.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .movie__item-text {
+                background: $c-gradation;
+                background-clip: text;
+            }
         }
     }
+
 }
 
 .movie__item-thumbnail {
     position: relative;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 
     &::before {
         position: absolute;
@@ -75,6 +112,11 @@
         background-repeat: no-repeat;
         flex-shrink: 0;
         transition: transform 0.3s;
+
+        @include mq("md") {
+            width: 64px;
+            height: 64px;
+        }
     }
 }
 
@@ -85,10 +127,10 @@
     border-radius: 0 16px 16px 0;
 }
 
-.movie__item-link {
+.movie__item-link1,
+.movie__item-link2 {
     display: flex;
     flex-direction: column;
-    gap: 8.5px;
     justify-content: center;
     align-items: center;
     background: $c-white;
@@ -110,8 +152,44 @@
     }
 }
 
-.movie__item-icon {
-    position: relative;
+.movie__item-link1 {
+    &::after {
+        position: absolute;
+        content: '';
+        top: 28px;
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/movie-icon01.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+
+        @include mq("md") {
+            width: 36px;
+            height: 36px;
+            top: 38px;
+        }
+    }
+}
+
+.movie__item-link2 {
+    &::after {
+        position: absolute;
+        content: '';
+        top: 33px;
+        width: 27px;
+        height: 27px;
+        background-image: url(../images/movie-icon02.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+
+        @include mq("md") {
+            width: 36px;
+            height: 36px;
+            top: 38px;
+        }
+    }
 }
 
 .movie__item-text {
@@ -124,4 +202,11 @@
     transition: background 0.3s;
     position: relative;
     z-index: $layer-up;
+    margin-top: 35px;
+
+    @include mq("lg") {
+        font-size: 25px;
+        letter-spacing: -2.25px;
+        margin-top: 46px;
+    }
 }
