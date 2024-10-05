@@ -13,11 +13,12 @@
     margin-top: rclamp(38, 88, 390, 1440);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 57px 0;
 
     @include mq("md") {
         gap: 33px 0;
+        justify-content: space-between;
     }
 }
 

@@ -82,6 +82,11 @@
         top: 50%;
         width: 29px;
         height: 29px;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 

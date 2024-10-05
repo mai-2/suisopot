@@ -28,10 +28,6 @@
     }
 }
 
-.ready__item {
-    width: 100%;
-}
-
 @include mq("md") {
     .ready__lead-1 {
         left: 42px;

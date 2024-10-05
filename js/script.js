@@ -74,7 +74,7 @@ const swiper3 = new Swiper('#js-voice-swiper', {
   // Optional parameters
   loop: true,
   breakpoints: {
-    768: {
+    1024: {
       slidesPerView: 3,
     }
   },

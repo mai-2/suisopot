@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 14px;
 
     @include mq("md") {
@@ -25,8 +26,102 @@
 
 .movie__item {
     max-width: 471px;
+    display: grid;
+    border-radius: 16px;
+    overflow: hidden;
+    grid-template-columns: 47.9% 1fr;
+    grid-template-rows: 1fr;
 
-    img {
-        border-radius: 16px;
+    &:hover {
+        .movie__item-thumbnail {
+            &::before {
+                transform: translate(-50%, -50%) scale(1.25);
+            }
+        }
+
+        .movie__item-link {
+            background-color: $c-white;
+
+            &::before {
+                opacity: 0;
+            }
+
+            .movie__item-icon path {
+                stroke: url(#gradientMovieIcon1);
+            }
+        }
+
+        .movie__item-text {
+            background: $c-gradation;
+            background-clip: text;
+        }
     }
+}
+
+.movie__item-thumbnail {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/movie-icon.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+    }
+}
+
+.movie__item-container {
+    background: $c-gradation;
+    height: 100%;
+    padding: 2px 2px 2px 0;
+    border-radius: 0 16px 16px 0;
+}
+
+.movie__item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 8.5px;
+    justify-content: center;
+    align-items: center;
+    background: $c-white;
+    border-radius: 0 16px 16px 0;
+    height: 100%;
+    transition: background-color 0.3s;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $c-gradation;
+        border-radius: 0 16px 16px 0;
+        transition: opacity 0.3s;
+    }
+}
+
+.movie__item-icon {
+    position: relative;
+}
+
+.movie__item-text {
+    font-family: $font-family-comment;
+    font-size: 20px;
+    letter-spacing: -1.8px;
+    background: $c-white;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s;
+    position: relative;
+    z-index: $layer-up;
 }

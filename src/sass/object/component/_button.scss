@@ -8,14 +8,58 @@
     color: $c-white;
     border-radius: rclamp(32, 40, 390, 1440);
     font-weight: $bold;
+    box-shadow: 0px 0px 4px 0px rgba(83, 46, 37, 0.25);
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: $c-white;
+        color: $c-accent;
+        opacity: 1;
+
+        svg path{
+            fill: $c-accent;
+        }
+    }
 }
 
 .button-link {
-    background: $c-gradation;
     border-radius: 32px;
     box-shadow: 0px 0px 4px 0px rgba(41, 81, 86, 0.25);
     padding: 16px 24px;
     color: $c-white;
     min-width: 258px;
     display: inline-block;
+    background-color: $c-white;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: opacity 0.3s;
+        background: $c-gradation;
+        border-radius: 32px;
+    }
+
+    &:hover {
+        opacity: 1;
+
+        &::before {
+            opacity: 0;
+        }
+
+        .button-link__text {
+            background: $c-gradation text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.button-link__text {
+    transition: background 0.3s;
+    position: relative;
+    z-index: $layer-up;
 }
